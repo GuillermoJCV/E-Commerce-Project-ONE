@@ -21,22 +21,18 @@ body {
     background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
     color: #fff;
   }
-  .logo {
-    font-size: 24px;
-  }
-  .search {
-    flex: 1;
-    margin: 0 20px;
-  }
-  .nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  .nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
+  /* Estilos para tamaños de pantalla grandes */
+.nav {
+  display: flex;
+}
+.nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
   .nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -50,4 +46,57 @@ body {
     background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
     border-radius: 5px;
     font-size: 18px;
+  }
+  .menu-icon {
+    display: none; /* Oculta el icono de hamburguesa por defecto */
+  }
+  .search {
+    flex: 1;
+    margin-left: 50px; /* Ajuste el margen derecho para separar más el elemento de búsqueda del logo */
+  }
+  .search input[type="text"] {
+    padding: 8px; /* Espaciado interno de la barra de búsqueda */
+    border: 1px solid #ccc; /* Borde de la barra de búsqueda */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 200px; /* Ancho de la barra de búsqueda */
+    box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+  }
+  
+  .search input[type="text"]:focus {
+    outline: none; /* Elimina el contorno de enfoque */
+    border-color: #007bff; /* Cambia el color del borde cuando la barra de búsqueda está enfocada */
+  }  
+  
+/* Estilos para tamaños de pantalla pequeños */
+  @media screen and (max-width: 768px) {
+    .nav ul {
+      display: none; /* Oculta el menú en pantallas pequeñas */
+    }
+  
+    .menu-icon {
+      display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
+      cursor: pointer;
+    }
+  
+    .header {
+      position: relative; /* Asegura que el menú se despliegue correctamente */
+    }
+  
+    .nav {
+      position: absolute;
+      top: 50px; /* Posición del menú al desplegarse */
+      left: 0;
+      width: 100%; /* Ancho total del menú */
+      background-color: #333; /* Color de fondo del menú */
+      padding: 20px; /* Espaciado interno del menú */
+      box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+    }
+  
+    .nav ul {
+      display: block; /* Muestra la lista de elementos del menú */
+    }
+    .nav ul li {
+      display: block; /* Muestra cada elemento de menú en una línea */
+      margin-bottom: 10px; /* Espacio entre elementos de menú */
+    }
   }
