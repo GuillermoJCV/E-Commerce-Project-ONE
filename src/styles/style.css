@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere:wght@400;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff !important;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+    color: #fff;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .search {
+    flex: 1;
+    margin: 0 20px;
+  }
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, font-size 0.3s; /* Transición suave para los cambios de color y tamaño */
+    padding: 10px;
+    font-size: 16px;
+  }
+  .nav ul li a:hover {
+    color: #ffffff; /* Cambia el color al pasar el cursor sobre el enlace */
+    font-size: 18px; /* Cambia el tamaño del texto al pasar el cursor sobre el enlace */
+    background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+    border-radius: 5px;
+    font-size: 18px;
+  }
