@@ -31,7 +31,7 @@ body {
 }
 
 .nav ul li {
-  margin-right: 20px;
+  margin-right: 25px;
 }
   .nav ul li a {
     color: #fff;
@@ -42,10 +42,9 @@ body {
   }
   .nav ul li a:hover {
     color: #ffffff; /* Cambia el color al pasar el cursor sobre el enlace */
-    font-size: 18px; /* Cambia el tamaño del texto al pasar el cursor sobre el enlace */
+    font-size: 16px; /* Cambia el tamaño del texto al pasar el cursor sobre el enlace */
     background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
     border-radius: 5px;
-    font-size: 18px;
   }
   .menu-icon {
     display: none; /* Oculta el icono de hamburguesa por defecto */
@@ -67,36 +66,36 @@ body {
     border-color: #007bff; /* Cambia el color del borde cuando la barra de búsqueda está enfocada */
   }  
   
-/* Estilos para tamaños de pantalla pequeños */
+/* ***Estilos para tamaños de Tablets*** */
+
   @media screen and (max-width: 768px) {
     .nav ul {
       display: none; /* Oculta el menú en pantallas pequeñas */
     }
-  
     .menu-icon {
       display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
       cursor: pointer;
     }
-  
     .header {
       position: relative; /* Asegura que el menú se despliegue correctamente */
     }
-  
-    .nav {
+    .tablet-nav {
       position: absolute;
       top: 50px; /* Posición del menú al desplegarse */
-      left: 0;
-      width: 100%; /* Ancho total del menú */
-      background-color: #333; /* Color de fondo del menú */
-      padding: 20px; /* Espaciado interno del menú */
+      right: 20px; /* Ajuste para colocar el menú en el lado derecho */
+      background-color: rgba(68, 198, 28, 0.8); /* Fondo verde transparente */
+      padding: 15px; /* Espaciado interno del menú */
       box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+      border-radius: 10px; /* Redondear las esquinas del menú */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra para el efecto 3D */
     }
-  
-    .nav ul {
+    .tablet-nav ul {
       display: block; /* Muestra la lista de elementos del menú */
     }
-    .nav ul li {
+    .tablet-nav ul li {
       display: block; /* Muestra cada elemento de menú en una línea */
-      margin-bottom: 10px; /* Espacio entre elementos de menú */
+      margin-bottom: 7px; /* Espacio entre elementos de menú */
+      text-align: left; /* Alinea los elementos del menú a la derecha */
+      padding: 2px; /* Ajuste el espacio interno de los elementos de menú */
     }
   }

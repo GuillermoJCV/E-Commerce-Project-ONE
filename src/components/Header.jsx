@@ -47,7 +47,7 @@ function Header() {
       
       {/* Renderizar el menú si showMenu es true */}
       {showMenu && (
-        <nav className="nav">
+         <nav className="nav tablet-nav"> {/* Añadir una clase específica para el menú en tablets */}
           <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Productos</a></li>
