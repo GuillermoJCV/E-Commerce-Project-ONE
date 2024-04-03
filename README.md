@@ -1,10 +1,11 @@
-#PROYECTO ONE E-COMMERCE
+# PROYECTO ONE E-COMMERCE
 
-Este es un proyecto conjunto entre las personas del curso de Alura ONE y algunas personas más que quisieron participar
+**Este es un proyecto conjunto entre las personas del curso de Alura ONE y algunas personas más que quisieron participar**
 
-#Reglas:
+## Reglas:
 
-* El html no se debe modificar
-* Las Pull Request (PR) deben cambiar una sola cosa, como agregar un componente o mejorar rendimiento de un componente en sí.
-* Vamos a utilizar un solo framework de css para todo. (Bootstrap o Tailwind, estamos eligiendo)
+* El html y el main.jsx no se deben modificar
+* Para agregar contenido al proyecto tienen que hacer una branch nueva y no hacer el merge directamente sino una pull request para poder revisar el código
+* Vamos a utilizar **React** como framework y algunas herramientas más como **Zustand** y **React Router** (Se aceptan sugerencias y se hará votación)
+* Se utilizará **CSS Puro** para los estilos
 
