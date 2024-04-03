@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
-import useWindowWidth from '../hooks/useWindowWidth'; // Importa el hook personalizado
+import React, { useState, useEffect } from 'react';
 import '../styles/style.css';
 import Logo from '../assets/image/logo2.png';
 import menuIcon from '../assets/icons/menu-icon.png';
 
 function Header() {
-  const windowWidth = useWindowWidth(); // Usa el hook personalizado
-  const [showMenu, setShowMenu] = useState(windowWidth > 768);
+  const [showMenu, setShowMenu] = useState(true); // Mostrar el menú inicialmente en pantallas grandes
 
   // Función para alternar la visibilidad del menú
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  // Ocultar el menú cuando el tamaño de la pantalla es pequeño
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setShowMenu(false);
+      } else {
+        setShowMenu(true);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Limpiar el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="header">
@@ -43,5 +59,6 @@ function Header() {
     </div>
   );
 }
+
 
 export default Header;
