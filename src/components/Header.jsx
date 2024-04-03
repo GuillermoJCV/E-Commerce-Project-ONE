@@ -24,7 +24,7 @@ function Header() {
     <div className="header">
       {/* Sección del logo */}
       <div className="logo">
-        <img src={Logo} alt="Logo" style={{ width: '100px', height: 'auto' }} />
+        <img src={Logo} alt="Logo" />
       </div>
 
       <div className="search">
