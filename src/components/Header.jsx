@@ -8,10 +8,14 @@ function Header() {
 
   // Función para alternar la visibilidad del menú
   const toggleMenu = () => {
+     // Obtener una referencia al elemento del menú
     const nav = menuRef.current;
+    // Verificar si el menú tiene la clase 'show'
     if (nav.classList.contains('show')) {
+      // Si tiene la clase 'show', removerla para ocultar el menú
       nav.classList.remove('show');
     } else {
+      // Si no tiene la clase 'show', agregarla para mostrar el menú
       nav.classList.add('show');
     }
   };
