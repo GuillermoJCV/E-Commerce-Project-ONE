@@ -1,33 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import '../styles/style.css';
 import Logo from '../assets/image/logo2.png';
 import menuIcon from '../assets/icons/menu-icon.png';
 
 function Header() {
-  const [showMenu, setShowMenu] = useState(true); // Mostrar el menú inicialmente en pantallas grandes
+  const menuRef = useRef(); // Ref para el menú
 
   // Función para alternar la visibilidad del menú
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+     // Obtener una referencia al elemento del menú
+    const nav = menuRef.current;
+    // Verificar si el menú tiene la clase 'show'
+    if (nav.classList.contains('show')) {
+      // Si tiene la clase 'show', removerla para ocultar el menú
+      nav.classList.remove('show');
+    } else {
+      // Si no tiene la clase 'show', agregarla para mostrar el menú
+      nav.classList.add('show');
+    }
   };
-
-  // Ocultar el menú cuando el tamaño de la pantalla es pequeño
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setShowMenu(false);
-      } else {
-        setShowMenu(true);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Limpiar el event listener cuando el componente se desmonta
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <div className="header">
@@ -38,27 +29,24 @@ function Header() {
 
       <div className="search">
         {/* Barra de búsqueda */}
-        <input type="text" placeholder="Buscar productos..." />
+        <input type="text" placeholder="Buscar productos..." id="searchInput" />
       </div>
 
       <div className="menu-icon" onClick={toggleMenu}>
         <img src={menuIcon} alt="" />
       </div>
       
-      {/* Renderizar el menú si showMenu es true */}
-      {showMenu && (
-         <nav className="nav tablet-nav"> {/* Añadir una clase específica para el menú en tablets */}
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Integrantes</a></li>
-          </ul>
-        </nav>
-      )}
+      {/* Renderizar el menú */}
+      <nav ref={menuRef} className="nav tablet-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Integrantes</a></li>
+        </ul>
+      </nav>
     </div>
   );
 }
-
 
 export default Header;

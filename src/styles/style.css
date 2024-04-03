@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Pompiere:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Pompiere:wght@400;600;700&display=swap');*/
+
 * {
   margin: 0;
   padding: 0;
@@ -88,6 +89,8 @@ body {
       box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
       border-radius: 10px; /* Redondear las esquinas del menú */
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra para el efecto 3D */
+      margin-top: 35px;
+      display: none; /* Oculta el menú en pantallas pequeñas por defecto */
     }
     .tablet-nav ul {
       display: block; /* Muestra la lista de elementos del menú */
@@ -97,5 +100,8 @@ body {
       margin-bottom: 7px; /* Espacio entre elementos de menú */
       text-align: left; /* Alinea los elementos del menú a la derecha */
       padding: 2px; /* Ajuste el espacio interno de los elementos de menú */
+    }
+    .tablet-nav.show {
+      display: block; /* Muestra el menú cuando tiene la clase "show" */
     }
   }
