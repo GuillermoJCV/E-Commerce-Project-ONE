@@ -15,12 +15,55 @@ body {
     background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
     color: #fff;
   }
+
+/* *** Logo *** */
 .logo img{
   width: 100px;
   height: auto;
   aspect-ratio: 100/79;
 }
-  /* Estilos para tamaños de pantalla grandes */
+
+/* *** Search *** */
+
+.search {
+  position: relative;
+}
+.search input[type="text"] {
+  padding: 8px; /* Espaciado interno de la barra de búsqueda */
+  border: 1px solid #ccc; /* Borde de la barra de búsqueda */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 200px; /* Ancho de la barra de búsqueda */
+  box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+  border-radius: 5px;
+}
+
+.search input[type="text"]:focus {
+  outline: none; /* Elimina el contorno de enfoque */
+  border-color: #007bff; /* Cambia el color del borde cuando la barra de búsqueda está enfocada */
+}  
+.search-icon-container {
+  position: absolute; /* Posición absoluta para que se pueda colocar dentro de .search */
+  right: 5px; /* Alinea el icono a la derecha del campo de búsqueda */
+  top: 50%; /* Alinea verticalmente el icono al 50% de la altura del contenedor padre */
+  transform: translateY(-50%); /* Ajusta el icono para que esté centrado verticalmente */
+  width: 30px; /* Ancho del contenedor del icono */
+  height: 30px; /* Altura del contenedor del icono */
+  border-radius: 50%; /* Establece el borde redondeado para formar un círculo */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+.search-icon {
+  width: 20px; /* Ajusta el tamaño del icono */
+  height: 20px; /* Ajusta el tamaño del icono */
+}
+
+/* *** Menu icono *** */
+.menu-icon {
+  display: none; /* Oculta el icono de hamburguesa por defecto */
+}
+
+/* *Estilos para tamaños de pantalla grandes* */
 .nav {
   display: flex;
 }
@@ -28,73 +71,81 @@ body {
   list-style-type: none;
   display: flex;
 }
-
 .nav ul li {
   margin-right: 25px;
 }
-  .nav ul li a {
+.nav ul li a {
+  color: #fff;
+  text-decoration: none; /* Quita el subrayado por defecto */
+  transition: color 0.3s, font-size 0.3s; /* Transición suave para los cambios de color y tamaño */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+.nav ul li a:hover {
+  color: #ffffff; /* Cambia el color al pasar el cursor sobre el enlace */
+  font-size: 16px; /* Cambia el tamaño del texto al pasar el cursor sobre el enlace */
+  background: var(--mainly-color);
+  border-radius: 5px;
+}
+
+/* *** login-menu *** */
+.login-ingresar {
+  display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
+  cursor: pointer;
+}
+.loginMenu {
+  display: none; /* Oculta el menú en pantallas pequeñas */
+}
+.header, .loginMenu {
+  position: relative; 
+}
+.login-menu {
+  position: absolute;
+  top: 50px; /* Posición del menú al desplegarse */
+  right: 10px; /* Ajuste para colocar el menú en el lado derecho */
+  background: var(--mainly-color); /* Fondo verde transparente */
+  padding: 10px; /* Espaciado interno del menú */
+  box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+  border-radius: 10px; /* Redondear las esquinas del menú */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Agrega sombra para el efecto 3D */
+  margin-top: 35px;
+  display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+  }
+  .login-menu ul {
+    display: block; /* Muestra la lista de elementos del menú */
+  }
+  .login-menu ul li {
+    display: block; /* Muestra cada elemento de menú en una línea */
+    margin-bottom: 7px; /* Espacio entre elementos de menú */
+    text-align: left; /* Alinea los elementos del menú a la derecha */
+    padding: 5px; /* Ajuste el espacio interno de los elementos de menú */
+  }
+  .login-menu.show {
+    display: block; /* Muestra el menú cuando tiene la clase "show" */
+  }
+  .login-menu ul li a {
+    border: none;
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Quita el subrayado por defecto */
     transition: color 0.3s, font-size 0.3s; /* Transición suave para los cambios de color y tamaño */
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ffffff;
-    border-radius: 8px;
+  }
+  .login-menu ul li a:hover {
+    background: var(--secondary-color);
+  }
 
-  }
-  .nav ul li a:hover {
-    color: #ffffff; /* Cambia el color al pasar el cursor sobre el enlace */
-    font-size: 16px; /* Cambia el tamaño del texto al pasar el cursor sobre el enlace */
-    background: var(--mainly-color);
-    border-radius: 5px;
-  }
-  .menu-icon {
-    display: none; /* Oculta el icono de hamburguesa por defecto */
-  }
-  .search {
-
-    position: relative;
-  }
-  .search input[type="text"] {
-    padding: 8px; /* Espaciado interno de la barra de búsqueda */
-    border: 1px solid #ccc; /* Borde de la barra de búsqueda */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 200px; /* Ancho de la barra de búsqueda */
-    box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
-    border-radius: 5px;
-  }
-  
-  .search input[type="text"]:focus {
-    outline: none; /* Elimina el contorno de enfoque */
-    border-color: #007bff; /* Cambia el color del borde cuando la barra de búsqueda está enfocada */
-  }  
-  .search-icon-container {
-    position: absolute; /* Posición absoluta para que se pueda colocar dentro de .search */
-    right: 5px; /* Alinea el icono a la derecha del campo de búsqueda */
-    top: 50%; /* Alinea verticalmente el icono al 50% de la altura del contenedor padre */
-    transform: translateY(-50%); /* Ajusta el icono para que esté centrado verticalmente */
-    width: 30px; /* Ancho del contenedor del icono */
-    height: 30px; /* Altura del contenedor del icono */
-    border-radius: 50%; /* Establece el borde redondeado para formar un círculo */
-    display: flex; /* Utiliza flexbox para centrar el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-  }
-  
-  .search-icon {
-    width: 20px; /* Ajusta el tamaño del icono */
-    height: 20px; /* Ajusta el tamaño del icono */
-  }
-  
 /* ***Estilos para tamaños de Tablets*** */
 
   @media screen and (max-width: 768px) {
-    .nav ul {
-      display: none; /* Oculta el menú en pantallas pequeñas */
-    }
     .menu-icon {
       display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
       cursor: pointer;
+    }
+    .nav ul {
+      display: none; /* Oculta el menú en pantallas pequeñas */
     }
     .header {
       position: relative; /* Asegura que el menú se despliegue correctamente */
@@ -102,12 +153,12 @@ body {
     .tablet-nav {
       position: absolute;
       top: 50px; /* Posición del menú al desplegarse */
-      right: 20px; /* Ajuste para colocar el menú en el lado derecho */
+      right: 10px; /* Ajuste para colocar el menú en el lado derecho */
       background: var(--mainly-color); /* Fondo verde transparente */
-      padding: 15px; /* Espaciado interno del menú */
+      padding: 10px; /* Espaciado interno del menú */
       box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
       border-radius: 10px; /* Redondear las esquinas del menú */
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra para el efecto 3D */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Agrega sombra para el efecto 3D */
       margin-top: 40px;
       display: none; /* Oculta el menú en pantallas pequeñas por defecto */
     }
@@ -131,4 +182,51 @@ body {
     .tablet-nav ul li a:hover {
      background: var(--secondary-color);
     }
+
+    /* *** login-menu *** */
+.login-ingresar {
+  display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
+  cursor: pointer;
+}
+.loginMenu {
+  display: none; /* Oculta el menú en pantallas pequeñas */
+}
+.header, .loginMenu {
+  position: relative; 
+}
+.login-menu {
+  position: absolute;
+  top: 50px; /* Posición del menú al desplegarse */
+  right: 30px; /* Ajuste para colocar el menú en el lado derecho */
+  background: var(--mainly-color); /* Fondo verde transparente */
+  padding: 10px; /* Espaciado interno del menú */
+  box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+  border-radius: 10px; /* Redondear las esquinas del menú */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Agrega sombra para el efecto 3D */
+  margin-top: 170px;
+  display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+  }
+  .login-menu ul {
+    display: block; /* Muestra la lista de elementos del menú */
+  }
+  .login-menu ul li {
+    display: block; /* Muestra cada elemento de menú en una línea */
+    margin-bottom: 7px; /* Espacio entre elementos de menú */
+    text-align: left; /* Alinea los elementos del menú a la derecha */
+    padding: 5px; /* Ajuste el espacio interno de los elementos de menú */
+  }
+  .login-menu.show {
+    display: block; /* Muestra el menú cuando tiene la clase "show" */
+  }
+  .login-menu ul li a {
+    border: none;
+    color: #fff;
+    text-decoration: none; /* Quita el subrayado por defecto */
+    transition: color 0.3s, font-size 0.3s; /* Transición suave para los cambios de color y tamaño */
+    padding: 10px;
+    font-size: 16px;
+  }
+  .login-menu ul li a:hover {
+    background: var(--secondary-color);
+  }
   }
