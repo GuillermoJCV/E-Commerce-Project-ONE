@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+    background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
     color: #fff;
   }
 .logo img{
@@ -38,19 +38,22 @@ body {
     transition: color 0.3s, font-size 0.3s; /* Transición suave para los cambios de color y tamaño */
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+
   }
   .nav ul li a:hover {
     color: #ffffff; /* Cambia el color al pasar el cursor sobre el enlace */
     font-size: 16px; /* Cambia el tamaño del texto al pasar el cursor sobre el enlace */
-    background: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+    background: var(--mainly-color);
     border-radius: 5px;
   }
   .menu-icon {
     display: none; /* Oculta el icono de hamburguesa por defecto */
   }
   .search {
-    flex: 1;
-    margin-left: 50px; /* Ajuste el margen derecho para separar más el elemento de búsqueda del logo */
+
+    position: relative;
   }
   .search input[type="text"] {
     padding: 8px; /* Espaciado interno de la barra de búsqueda */
@@ -58,12 +61,30 @@ body {
     border-radius: 5px; /* Bordes redondeados */
     width: 200px; /* Ancho de la barra de búsqueda */
     box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
+    border-radius: 5px;
   }
   
   .search input[type="text"]:focus {
     outline: none; /* Elimina el contorno de enfoque */
     border-color: #007bff; /* Cambia el color del borde cuando la barra de búsqueda está enfocada */
   }  
+  .search-icon-container {
+    position: absolute; /* Posición absoluta para que se pueda colocar dentro de .search */
+    right: 5px; /* Alinea el icono a la derecha del campo de búsqueda */
+    top: 50%; /* Alinea verticalmente el icono al 50% de la altura del contenedor padre */
+    transform: translateY(-50%); /* Ajusta el icono para que esté centrado verticalmente */
+    width: 30px; /* Ancho del contenedor del icono */
+    height: 30px; /* Altura del contenedor del icono */
+    border-radius: 50%; /* Establece el borde redondeado para formar un círculo */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  .search-icon {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px; /* Ajusta el tamaño del icono */
+  }
   
 /* ***Estilos para tamaños de Tablets*** */
 
@@ -82,12 +103,12 @@ body {
       position: absolute;
       top: 50px; /* Posición del menú al desplegarse */
       right: 20px; /* Ajuste para colocar el menú en el lado derecho */
-      background-color: rgba(68, 198, 28, 0.8); /* Fondo verde transparente */
+      background: var(--mainly-color); /* Fondo verde transparente */
       padding: 15px; /* Espaciado interno del menú */
       box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
       border-radius: 10px; /* Redondear las esquinas del menú */
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra para el efecto 3D */
-      margin-top: 35px;
+      margin-top: 40px;
       display: none; /* Oculta el menú en pantallas pequeñas por defecto */
     }
     .tablet-nav ul {
@@ -101,5 +122,13 @@ body {
     }
     .tablet-nav.show {
       display: block; /* Muestra el menú cuando tiene la clase "show" */
+    }
+    .tablet-nav ul li a {
+      border: none;
+      color: #fff; /* Color de texto por defecto */
+      transition: color 0.3s; /* Transición suave para el cambio de color */
+    }
+    .tablet-nav ul li a:hover {
+     background: var(--secondary-color);
     }
   }
