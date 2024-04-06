@@ -149,6 +149,7 @@ body {
   }
   .login-menu ul li a:hover {
     background: var(--secondary-color);
+    border-radius: 10px;
   }
 
 /* ***Estilos para tamaños de Tablets*** */
