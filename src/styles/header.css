@@ -30,28 +30,39 @@ body {
 }
 .search input[type="text"] {
   padding: 8px; /* Espaciado interno de la barra de búsqueda */
-  border: 1px solid #ccc; /* Borde de la barra de búsqueda */
+  border: 2px solid var(--fourth-color); /* Borde de la barra de búsqueda */
   border-radius: 5px; /* Bordes redondeados */
-  width: 200px; /* Ancho de la barra de búsqueda */
+  width: 260px; /* Ancho de la barra de búsqueda */
   box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
   border-radius: 5px;
+  height: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .search input[type="text"]:focus {
   outline: none; /* Elimina el contorno de enfoque */
-  border-color: #007bff; /* Cambia el color del borde cuando la barra de búsqueda está enfocada */
+  border: 2px solid var(--fifth-color);
 }  
 .search-icon-container {
   position: absolute; /* Posición absoluta para que se pueda colocar dentro de .search */
-  right: 5px; /* Alinea el icono a la derecha del campo de búsqueda */
+  right: 15px; /* Alinea el icono a la derecha del campo de búsqueda */
   top: 50%; /* Alinea verticalmente el icono al 50% de la altura del contenedor padre */
   transform: translateY(-50%); /* Ajusta el icono para que esté centrado verticalmente */
-  width: 30px; /* Ancho del contenedor del icono */
-  height: 30px; /* Altura del contenedor del icono */
-  border-radius: 50%; /* Establece el borde redondeado para formar un círculo */
+  width: 40px; /* Ancho del contenedor del icono */
+  height: 40px; /* Altura del contenedor del icono */
+  border-radius:0 5px 5px 0; /* Establece el borde redondeado para formar un círculo */
   display: flex; /* Utiliza flexbox para centrar el contenido */
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
+  
+  /* Borde solo en el lado izquierdo */
+  border-left: 2px solid var(--fourth-color);
+  
+  /* Borde transparente en los demás lados */
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
 }
 .search-icon {
   width: 20px; /* Ajusta el tamaño del icono */
@@ -73,6 +84,9 @@ body {
 }
 .nav ul li {
   margin-right: 25px;
+}
+.nav ul li:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
 }
 .nav ul li a {
   color: #fff;
@@ -139,7 +153,7 @@ body {
 
 /* ***Estilos para tamaños de Tablets*** */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 980px) {
     .menu-icon {
       display: block; /* Muestra el icono de hamburguesa en pantallas pequeñas */
       cursor: pointer;

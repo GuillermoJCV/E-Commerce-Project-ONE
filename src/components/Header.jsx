@@ -65,6 +65,10 @@ function Header() {
           <li>
             <a href="#">Contacto</a>
           </li>
+          <li>
+            <a href="#">Sobre nosotros</a>
+          </li>
+
           {/* Usar la referencia para mostrar el menú de ingreso */}
           <li className="login-ingresar" onClick={handleLoginClick}>
             <a href="#">Ingresar</a>

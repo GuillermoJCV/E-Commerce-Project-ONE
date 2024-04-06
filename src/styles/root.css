@@ -10,6 +10,8 @@
 * Sacar los estilos para el body de los estilos del header y agregarlos a un body.css
 * Cambiar el nombre del archivo styles.css por header.css
 * Elegir la paleta de colores que vamos a utilizar para el darkmode
+
+* Nuevo color para barra de búsqueda:
 */
 
 @media (prefers-color-scheme: light) {
@@ -17,6 +19,8 @@
   	--mainly-color: #44c61c;
   	--secondary-color: #34aa13;
   	--third-color: #277912;
+	--fourth-color: #808080;
+	--fifth-color: #F3DB11;
   	--main-txt: #fff;
   	--main-txt2: #000;
   	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
