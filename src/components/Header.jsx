@@ -1,8 +1,10 @@
+// Header.jsx
+
 import React, { useRef } from "react";
 import "../styles/header.css";
 import Logo from "../assets/image/logo2.png";
-import menuIcon from "../assets/icons/menu-icon.png";
 import searchIcon from "../assets/icons/search-icon.png"; // Importa el ícono de búsqueda
+import Menu from "./Menu"; // Importa el nuevo componente Menu
 
 function Header() {
   const menuRef = useRef(); // Ref para el menú
@@ -49,44 +51,13 @@ function Header() {
         </div>
       </div>
 
-      <div className="menu-icon" onClick={toggleMenu}>
-        <img src={menuIcon} alt="" />
-      </div>
-
-      {/* Renderizar el menú */}
-      <nav ref={menuRef} className="nav tablet-nav">
-        <ul>
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Productos</a>
-          </li>
-          <li>
-            <a href="#">Contacto</a>
-          </li>
-          <li>
-            <a href="#">Sobre nosotros</a>
-          </li>
-
-          {/* Usar la referencia para mostrar el menú de ingreso */}
-          <li className="login-ingresar" onClick={handleLoginClick}>
-            <a href="#">Ingresar</a>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Renderizar el menú de ingreso */}
-      <nav ref={loginMenuRef} className="loginMenu login-menu">
-        <ul>
-          <li>
-            <a href="#">Iniciar Sesión</a>
-          </li>
-          <li>
-            <a href="#">Registrarse</a>
-          </li>
-        </ul>
-      </nav>
+      {/* Integrar el componente Menu aquí */}
+      <Menu
+        toggleMenu={toggleMenu}
+        handleLoginClick={handleLoginClick}
+        menuRef={menuRef}
+        loginMenuRef={loginMenuRef}
+      />
     </header>
   );
 }

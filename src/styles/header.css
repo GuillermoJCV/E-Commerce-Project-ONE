@@ -31,11 +31,10 @@ body {
 .search input[type="text"] {
   padding: 8px; /* Espaciado interno de la barra de búsqueda */
   border: 2px solid var(--fourth-color); /* Borde de la barra de búsqueda */
-  border-radius: 5px; /* Bordes redondeados */
-  width: 260px; /* Ancho de la barra de búsqueda */
+  border-radius: 5em; /* Bordes redondeados */
+  width: 350px; /* Ancho de la barra de búsqueda */
   box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
-  border-radius: 5px;
-  height: 40px;
+  height: 45px;
   margin-left: 15px;
   margin-right: 15px;
 }
