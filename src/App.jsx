@@ -1,17 +1,25 @@
-import React from 'react';
-import Header from './components/Header';
+import React, { lazy, Suspense} from 'react';
+import Header from './components/Header.jsx';
+import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+
+const HomePage = lazy(() => import('./components/home-page/HomePage.jsx'))
+const ProductsPage = lazy(() => import('./components/products-page/ProductsPage.jsx'))
 
 function App() {
 
   return (
-    <>
-      {/*<header>Esto se va a comvertir en un componente Header</header>
-
-      <main>Este componente va a ser dinamico y va a ser un router</main>
-
-  <footer> Esto se va a convertir en un componente Footer</footer>*/}
-  <Header />
-    </>
+    <BrowserRouter>
+      <Header/>
+        {/* TODO: Este div luego se tiene que cambiar por un componente loader */}
+        <Suspense fallback={<div>Cargando...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/products" element={<ProductsPage/>}/>
+            <Route path="/contact" element={<></>}/>
+          </Routes>
+        </Suspense>
+      {/*<Footer/>*/}
+    </BrowserRouter>
   )
 }
 
