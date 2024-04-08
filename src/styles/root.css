@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-/* TODO: 
-* Agregarle a la imagen del logo un aspect ratio de 100/79
-* Cambiar el color del header por el linear gradient
-* Sacar los estilos para el body de los estilos del header y agregarlos a un body.css
-* Cambiar el nombre del archivo styles.css por header.css
-* Elegir la paleta de colores que vamos a utilizar para el darkmode
-
-* Nuevo color para barra de búsqueda:
-*/
-
 @media (prefers-color-scheme: light) {
   :root {
   	--mainly-color: #44c61c;

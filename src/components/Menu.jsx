@@ -1,6 +1,5 @@
-// Menu.jsx
-
 import React, { useRef } from "react";
+import { NavLink } from 'react-router-dom';
 import "../styles/header.css";
 import menuIcon from "../assets/icons/menu-icon.png";
 
@@ -19,21 +18,41 @@ function Menu({ toggleMenu, handleLoginClick, menuRef, loginMenuRef }) {
       <nav ref={menuRef} className="nav tablet-nav">
         <ul>
           <li>
-            <a href="#">Inicio</a>
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Inicio
+            </NavLink>
           </li>
           <li>
-            <a href="#">Productos</a>
+            <NavLink
+              to="/products"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Productos
+            </NavLink>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <NavLink
+              to="/contact"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Contacto
+            </NavLink>
           </li>
           <li>
-            <a href="#">Sobre nosotros</a>
+            <NavLink
+              to="/about"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Sobre nosotros
+            </NavLink>
           </li>
 
           {/* Usar la referencia para mostrar el menú de ingreso */}
           <li className="login-ingresar" onClick={handleLoginClick}>
-            <a href="#">Ingresar</a>
+            <NavLink
+              to="/login"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Ingresar
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -42,10 +61,18 @@ function Menu({ toggleMenu, handleLoginClick, menuRef, loginMenuRef }) {
       <nav ref={loginMenuRef} className="loginMenu login-menu">
         <ul>
           <li>
-            <a href="#">Iniciar Sesión</a>
+            <NavLink
+              to="/signin"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Iniciar sesión
+            </NavLink>
           </li>
           <li>
-            <a href="#">Registrarse</a>
+            <NavLink
+              to="/signup"
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              Registrarse
+            </NavLink>
           </li>
         </ul>
       </nav>
