@@ -1,26 +1,29 @@
-body {
+.header {
+  overflow-x: hidden;
+  position: relative;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
+  color: #fff;
   font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  color: #fff !important;
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-    background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
-    color: #fff;
-  }
 
 /* *** Logo *** */
 .logo img{
   width: 100px;
   height: auto;
   aspect-ratio: 100/79;
+}
+
+/* Esta clase estiliza los navlinks cuando son el link activo 
+Estilicelo o borrelo si quiere, nomas es por si acaso*/
+.active {
+  background-color: green;
 }
 
 /* *** Search *** */
@@ -33,7 +36,6 @@ body {
   border: 2px solid var(--fourth-color); /* Borde de la barra de búsqueda */
   border-radius: 5em; /* Bordes redondeados */
   width: 350px; /* Ancho de la barra de búsqueda */
-  box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
   height: 45px;
   margin-left: 15px;
   margin-right: 15px;
