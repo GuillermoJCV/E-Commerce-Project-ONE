@@ -14,7 +14,7 @@
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "router-dom": "2.2.11",
+    "react-router-dom": "6.22.3",
     "zustand": "4.5.2"
   },
   "devDependencies": {
