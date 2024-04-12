@@ -1,11 +1,10 @@
 .header {
-  overflow-x: hidden;
+  overflow: visible;
   position: relative;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  overflow-x: hidden;
   position: relative;
   color: #fff !important;
 }
