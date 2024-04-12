@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom';
 import "../styles/header.css";
 import menuIcon from "../assets/icons/menu-icon.png";
 
-function Menu({ toggleMenu, handleLoginClick, menuRef, loginMenuRef }) {
+function Menu({ toggleMenu, handleLoginClick, loginMenuRef }) {
+  const menuRef = useRef(); // Ref para el menú
+
   return (
     <div>
-      <div className="menu-icon" onClick={toggleMenu}>
+      <div className="menu-icon" onClick={() => toggleMenu(menuRef)}>
         {/* Este ícono puede ser reutilizado aquí */}
         <img
           src={/* Importa el ícono de menú aquí */ menuIcon}
@@ -16,7 +18,6 @@ function Menu({ toggleMenu, handleLoginClick, menuRef, loginMenuRef }) {
 
       {/* Renderizar el menú */}
       <nav ref={menuRef} className="nav tablet-nav">
-        <ul>
           <li>
             <NavLink
               to="/"
@@ -54,12 +55,10 @@ function Menu({ toggleMenu, handleLoginClick, menuRef, loginMenuRef }) {
               Ingresar
             </NavLink>
           </li>
-        </ul>
       </nav>
 
       {/* Renderizar el menú de ingreso */}
       <nav ref={loginMenuRef} className="loginMenu login-menu">
-        <ul>
           <li>
             <NavLink
               to="/signin"
@@ -74,7 +73,6 @@ function Menu({ toggleMenu, handleLoginClick, menuRef, loginMenuRef }) {
               Registrarse
             </NavLink>
           </li>
-        </ul>
       </nav>
     </div>
   );

@@ -102,21 +102,21 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   display: flex;
 }
 
-.nav ul {
+.nav {
   list-style-type: none;
   display: flex;
 }
 
-.nav ul li {
+.nav li {
   margin-right: 25px;
 }
 
-.nav ul li:last-child {
+.nav li:last-child {
   margin-right: 0;
   /* Elimina el margen derecho del último elemento */
 }
 
-.nav ul li a {
+.nav li a {
   color: var(--main-txt);
   text-decoration: none;
   /* Quita el subrayado por defecto */
@@ -128,7 +128,7 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   border-radius: 8px;
 }
 
-.nav ul li a:hover {
+.nav li a:hover {
   color: var(--main-txt);
   /* Cambia el color al pasar el cursor sobre el enlace */
   font-size: 16px;
@@ -221,7 +221,7 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
     cursor: pointer;
   }
 
-  .nav ul {
+  .nav {
     display: none;
     /* Oculta el menú en pantallas pequeñas */
   }
