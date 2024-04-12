@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* TODO: 
@@ -15,43 +15,48 @@
 */
 
 @media (prefers-color-scheme: light) {
-  :root {
-  	--mainly-color: #44c61c;
-  	--secondary-color: #34aa13;
-  	--third-color: #277912;
-	--fourth-color: #aaaaaa;
-	--fifth-color: #F3DB11;
-  	--main-txt: #fff;
-  	--main-txt2: #000;
-  	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
-  }
+	:root {
+		--mainly-color: #44c61c;
+		--secondary-color: #34aa13;
+		--third-color: #277912;
+		--fourth-color: #aaaaaa;
+		--fifth-color: #F3DB11;
+		--main-txt: #fff;
+		--main-txt2: #000;
+		--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+		--first-shadow-color: rgba(0, 0, 0, 0.5);
+		/* Define la variable --shadow-color */
+		--second-shadow-color: rgba(0, 0, 0, 0.4);
+		/* Define la variable --shadow-color */
+
+	}
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-  	--mainly-color: #44c61c;
-  	--secondary-color: #34aa13;
-  	--third-color: #277912;
-  	--main-txt: #fff;
-  	--main-txt2: #000;
-  	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
-  }
+	:root {
+		--mainly-color: #44c61c;
+		--secondary-color: #34aa13;
+		--third-color: #277912;
+		--main-txt: #fff;
+		--main-txt2: #000;
+		--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+	}
 }
 
 .light-mode {
-  	--mainly-color: #44c61c;
-  	--secondary-color: #34aa13;
-  	--third-color: #277912;
-  	--main-txt: #fff;
-  	--main-txt2: #000;
-  	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
-  }
+	--mainly-color: #44c61c;
+	--secondary-color: #34aa13;
+	--third-color: #277912;
+	--main-txt: #fff;
+	--main-txt2: #000;
+	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+}
 
 .dark-mode {
-  	--mainly-color: #44c61c;
-  	--secondary-color: #34aa13;
-  	--third-color: #277912;
-  	--main-txt: #fff;
-  	--main-txt2: #000;
-  	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
-  }
+	--mainly-color: #44c61c;
+	--secondary-color: #34aa13;
+	--third-color: #277912;
+	--main-txt: #fff;
+	--main-txt2: #000;
+	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+}
