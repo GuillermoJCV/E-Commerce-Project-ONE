@@ -7,12 +7,11 @@ import searchIcon from "../assets/icons/search-icon.png"; // Importa el ícono d
 import Menu from "./Menu"; // Importa el nuevo componente Menu
 
 function Header() {
-  
   const loginMenuRef = useRef(); // Ref para el menú de ingreso
 
-  // Función para alternar la visibilidad del menú
+  // Función para alternar la visibilidad de los elementos
   const toggleShowClass = (ref) => {
-    ref.classList.toggle("show")
+    ref.current.classList.toggle("show")
   };
 
   return (
@@ -33,8 +32,7 @@ function Header() {
       </div>
 
       <Menu
-        toggleMenu={toggleShowClass}
-        handleLoginClick={() => toggleShowClass(loginMenuRef.current)}
+        toggleShowClass={toggleShowClass}
         loginMenuRef={loginMenuRef}
       />
     </header>
