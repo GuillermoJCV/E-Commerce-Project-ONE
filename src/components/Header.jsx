@@ -27,11 +27,7 @@ function Header() {
   // Función para manejar el clic en el enlace "Ingresar"
   const handleLoginClick = () => {
     const loginMenu = loginMenuRef.current;
-    if (loginMenu.classList.contains("show")) {
-      loginMenu.classList.remove("show");
-    } else {
-      loginMenu.classList.add("show");
-    }
+    loginMenu.classList.toggle("show");
   };
 
   return (
