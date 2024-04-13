@@ -1,51 +1,71 @@
 .signInContainer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../assets/image/bg_image.png'); /* Ruta a tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    }
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
+    
+  }
 
-.signIn {
-    max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
 
-.signIn__title {
+
+  .signIn {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    background: var(--login-bg);
+    box-shadow: 0 10px 20px var(--second-shadow-color);
+    transform: perspective(1000px) rotateX(5deg);
+  }
+  
+  .signIn__title {
     font-size: 24px;
     margin-bottom: 20px;
-}
-
-.signIn__form {
+    color: var(--third-color);
+  }
+  
+  .signIn__form {
     display: flex;
     flex-direction: column;
-}
-
-.signIn__label {
+  }
+  
+  .signIn__label {
     margin-bottom: 8px;
-}
-
-.signIn__input {
+  }
+  
+  .signIn__input {
     padding: 8px;
     margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
+    border: solid 1px var(--mainly-color);
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .signIn__input:hover {
+    box-shadow: 0 0 0 1px var(--mainly-color);
+    transition: box-shadow 0.3s ease;
+  }
 
-.signIn__button {
+  .signIn__input::placeholder {
+    color: var(--fourth-color); /* Color del texto del placeholder */
+    
+  }
+  
+  .signIn__button {
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background: var(--login-first-button);
+    color: var(--main-txt);
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-.signIn__button:hover {
-    background-color: #0056b3;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .signIn__button:hover {
+    background: var(--login-second-button);
+  }
+  

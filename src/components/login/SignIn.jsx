@@ -26,10 +26,10 @@ export default function SignIn() {
                 <h2 className="signIn__title">Inicio de Sesión</h2>
                 <form onSubmit={handleSubmit} className="signIn__form">
                     <label className="signIn__label" htmlFor="username">Usuario:</label>
-                    <input type="text" id="username" ref={usernameRef} className="signIn__input" />
+                    <input type="text" id="username" ref={usernameRef} className="signIn__input" placeholder='Ingrese su usuario' />
 
                     <label className="signIn__label" htmlFor="password">Contraseña:</label>
-                    <input type="password" id="password" ref={passwordRef} className="signIn__input" />
+                    <input type="password" id="password" ref={passwordRef} className="signIn__input" placeholder="Ingrese su contraseña" required  />
 
                     <button type="submit" className="signIn__button">Iniciar Sesión</button>
                 </form>

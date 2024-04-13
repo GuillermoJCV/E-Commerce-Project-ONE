@@ -18,7 +18,11 @@
 		/* Define la variable --shadow-color */
 		--second-shadow-color: rgba(0, 0, 0, 0.4);
 		/* Define la variable --shadow-color */
-
+		--login-bg: #fff;
+		--login-title: var(#277912);
+		--login-border-form: var(#44c61c);
+		--login-first-button: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+		--login-second-button: linear-gradient(45deg, #277912, #34aa13, #44c61c, #44c61c);
 	}
 }
 
@@ -43,10 +47,10 @@
 }
 
 .dark-mode {
-  	--mainly-color: #44c61c;
-  	--secondary-color: #34aa13;
-  	--third-color: #277912;
-  	--main-txt: #fff;
-  	--main-txt2: #000;
-  	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
-  }
+	--mainly-color: #44c61c;
+	--secondary-color: #34aa13;
+	--third-color: #277912;
+	--main-txt: #fff;
+	--main-txt2: #000;
+	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+}
