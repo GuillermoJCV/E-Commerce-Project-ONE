@@ -1,9 +1,15 @@
 import React, { useRef } from "react";
 import { NavLink } from 'react-router-dom';
 import menuIcon from "../../assets/icons/menu-icon.png"; // Ruta relativa a la carpeta 'assets'
+import moonIcon from "../../assets/icons/moon-icon.png"; // Ruta relativa al icono de luna
 
 function Menu({ toggleShowClass, loginMenuRef }) {
   const menuRef = useRef(); // Ref para el menú
+
+  // Función para cambiar entre modos de color
+  const toggleDarkMode = () => {
+    document.body.classList.toggle("dark-mode"); // Alternar clase dark-mode en el body
+  };
 
   return (
     <div>
@@ -54,6 +60,11 @@ function Menu({ toggleShowClass, loginMenuRef }) {
               className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Ingresar
             </NavLink>
+          </li>
+
+          {/* Ingresar icono para cambiar de tema de claro a oscuro */}
+          <li className="theme" onClick={toggleDarkMode}>
+            <img src={moonIcon} alt="Icono" />
           </li>
         </ul>
       </nav>

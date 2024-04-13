@@ -102,6 +102,7 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
 .nav ul {
   list-style-type: none;
   display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
 .nav ul li {
@@ -134,16 +135,26 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   border-radius: 5px;
 }
 
+/* *theme  */
+.theme {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centra verticalmente el icono de tema */
+}
+
+/* Estilos para el icono de tema */
+.theme img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+
 /* *** login-menu *** */
 .login-ingresar {
   display: block;
   /* Muestra el icono de hamburguesa en pantallas pequeñas */
   cursor: pointer;
-}
-
-.loginMenu {
-  display: none;
-  /* Oculta el menú en pantallas pequeñas */
 }
 
 .login-menu {
@@ -280,10 +291,6 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
     cursor: pointer;
   }
 
-  .loginMenu {
-    display: none;
-    /* Oculta el menú en pantallas pequeñas */
-  }
 
   .login-menu {
     position: absolute;
