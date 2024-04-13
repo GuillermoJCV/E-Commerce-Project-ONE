@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px 20px 10px;
     background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
     color: var(--main-txt);
   }
