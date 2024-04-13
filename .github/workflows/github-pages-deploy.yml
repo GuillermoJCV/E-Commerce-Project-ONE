@@ -1,0 +1,31 @@
+name: Github Pages Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install Packages
+        run: bun install
+
+      - name: Build Project
+        run: bun run build
+
+      - name: Install Packages
+        run: bun install
+
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
