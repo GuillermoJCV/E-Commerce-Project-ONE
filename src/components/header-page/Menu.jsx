@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { NavLink } from 'react-router-dom';
-import "../styles/header.css";
-import menuIcon from "../assets/icons/menu-icon.png";
+import menuIcon from "../../assets/icons/menu-icon.png"; // Ruta relativa a la carpeta 'assets'
 
 function Menu({ toggleShowClass, loginMenuRef }) {
   const menuRef = useRef(); // Ref para el menú

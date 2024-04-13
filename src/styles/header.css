@@ -6,7 +6,7 @@
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   position: relative;
-  color: #fff !important;
+  color: var(--main-txt) !important;
 }
 .header {
     display: flex;
@@ -14,7 +14,7 @@
     align-items: center;
     padding: 20px 20px;
     background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
-    color: #fff;
+    color: var(--main-txt);
   }
 
 /* *** Logo *** */
@@ -27,7 +27,7 @@
 /* Esta clase estiliza los navlinks cuando son el link activo 
 Estilicelo o borrelo si quiere, nomas es por si acaso*/
 .active {
-  background-color: green;
+  background-color: var(--third-color);
 }
 
 /* *** Search *** */
@@ -213,8 +213,9 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
 }
 
 /* ***Estilos para tamaños de Tablets*** */
+/* *Cambio de 980px a 1070 */
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1070px) {
   .menu-icon {
     display: block;
     /* Muestra el icono de hamburguesa en pantallas pequeñas */

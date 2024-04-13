@@ -1,11 +1,8 @@
-// Header.jsx
-
-import React, { useRef } from "react";
-import "../styles/header.css";
-import Logo from "../assets/image/logo2.png";
-import searchIcon from "../assets/icons/search-icon.png"; // Importa el ícono de búsqueda
-import Menu from "./Menu"; // Importa el nuevo componente Menu
-
+import React, { useRef } from 'react';
+import '../../styles/header.css';
+import Logo from '../../assets/image/logo2.png';
+import searchIcon from '../../assets/icons/search-icon.png';
+import Menu from './Menu';
 function Header() {
   const loginMenuRef = useRef(); // Ref para el menú de ingreso
 
