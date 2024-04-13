@@ -1,21 +1,18 @@
 .header {
-  overflow: visible;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  position: relative;
-  color: var(--main-txt) !important;
+  position: fixed; /* Hacer que el header se quede fijo */
+  top: 0; /* Fijar el header en la parte superior */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegurarse de que el header esté por encima del resto del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px;
+  background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
+  color: var(--main-txt);
+  width: 100%; /* Ocupar el ancho completo de la ventana */
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px 10px;
-    background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
-    color: var(--main-txt);
-  }
+
 
 /* *** Logo *** */
 .logo img {
