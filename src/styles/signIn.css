@@ -1,6 +1,15 @@
+.signInContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets/image/bg_image.png'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    }
+
 .signIn {
     max-width: 400px;
-    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
