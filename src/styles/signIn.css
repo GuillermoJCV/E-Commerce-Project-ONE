@@ -6,6 +6,7 @@
     height: 100vh;
     overflow: hidden;
     background: var(--radial-gradient-bg);
+    margin-top: 60px;
 }
 
 .signInContainer::before {
@@ -42,6 +43,7 @@
     /* Efecto 3D y escala */
     transition: transform 0.15s ease;
     /* Transición para el efecto de transformación */
+
 }
 
 .signIn:hover {
