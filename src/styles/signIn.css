@@ -5,57 +5,85 @@
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(circle at center, rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
-    
-  }
+    background: var(--radial-gradient-bg);
+}
+
+.signInContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        var(--background-image-1),
+        /* Primer gradiente lineal */
+        var(--background-image-2);
+    /* Segundo gradiente lineal */
+    background-size: 100px 100px;
+    /* Tamaño del patrón de luz */
+    pointer-events: none;
+    /* Permitir que los eventos pasen a través del pseudo-elemento */
+}
 
 
 
-  .signIn {
+.signIn {
     position: relative;
     z-index: 1;
     max-width: 600px;
     padding: 40px;
     border-radius: 10px;
-    background: var(--login-bg);
-    box-shadow: 0 10px 20px var(--second-shadow-color);
+    background: var(--login-signIn);
+    /* Color de fondo con opacidad */
+    box-shadow: 0 20px 40px var(--second-shadow-color);
+    /* Sombra más pronunciada */
     transform: perspective(1000px) rotateX(5deg);
-  }
-  
-  .signIn__title {
+    /* Efecto 3D y escala */
+    transition: transform 0.15s ease;
+    /* Transición para el efecto de transformación */
+}
+
+.signIn:hover {
+    transform: perspective(1000px) rotateX(3deg) translateY(-5px);
+    /* Elevación al pasar el cursor */
+}
+
+.signIn__title {
     font-size: 24px;
     margin-bottom: 20px;
     color: var(--third-color);
-  }
-  
-  .signIn__form {
+}
+
+.signIn__form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .signIn__label {
+}
+
+.signIn__label {
     margin-bottom: 8px;
-  }
-  
-  .signIn__input {
+}
+
+.signIn__input {
     padding: 8px;
     margin-bottom: 16px;
     border: solid 1px var(--mainly-color);
     border-radius: 10px;
     outline: none;
-  }
-  
-  .signIn__input:hover {
+}
+
+.signIn__input:hover {
     box-shadow: 0 0 0 1px var(--mainly-color);
     transition: box-shadow 0.3s ease;
-  }
+}
 
-  .signIn__input::placeholder {
-    color: var(--fourth-color); /* Color del texto del placeholder */
-    
-  }
-  
-  .signIn__button {
+.signIn__input::placeholder {
+    color: var(--fourth-color);
+    /* Color del texto del placeholder */
+
+}
+
+.signIn__button {
     padding: 10px;
     background: var(--login-first-button);
     color: var(--main-txt);
@@ -63,9 +91,8 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .signIn__button:hover {
+}
+
+.signIn__button:hover {
     background: var(--login-second-button);
-  }
-  
+}
