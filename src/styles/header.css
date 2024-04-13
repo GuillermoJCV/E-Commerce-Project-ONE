@@ -1,8 +1,8 @@
+
+/* *** Intente que se quede fijo el header pero no lo logre *** */
 .header {
   position: fixed; /* Hacer que el header se quede fijo */
   top: 0; /* Fijar el header en la parte superior */
-  left: 0;
-  right: 0;
   z-index: 1000; /* Asegurarse de que el header esté por encima del resto del contenido */
   display: flex;
   justify-content: space-between;
@@ -146,11 +146,6 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   /* Oculta el menú en pantallas pequeñas */
 }
 
-.header,
-.loginMenu {
-  position: relative;
-}
-
 .login-menu {
   position: absolute;
   top: 50px;
@@ -224,11 +219,6 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
     /* Oculta el menú en pantallas pequeñas */
   }
 
-  .header {
-    position: relative;
-    /* Asegura que el menú se despliegue correctamente */
-  }
-
   .tablet-nav {
     position: absolute;
     top: 50px;
@@ -293,11 +283,6 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   .loginMenu {
     display: none;
     /* Oculta el menú en pantallas pequeñas */
-  }
-
-  .header,
-  .loginMenu {
-    position: relative;
   }
 
   .login-menu {
