@@ -21,28 +21,28 @@ function Menu({ toggleShowClass, loginMenuRef }) {
           <li>
             <NavLink
               to="/"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Inicio
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/products"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Productos
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/contact"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Contacto
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/about"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Sobre nosotros
             </NavLink>
           </li>
@@ -51,7 +51,7 @@ function Menu({ toggleShowClass, loginMenuRef }) {
           <li className="login-ingresar" onClick={() => toggleShowClass(loginMenuRef)}>
             <NavLink
               to="/login"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Ingresar
             </NavLink>
           </li>
@@ -64,14 +64,14 @@ function Menu({ toggleShowClass, loginMenuRef }) {
           <li>
             <NavLink
               to="/signin"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Iniciar sesión
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/signup"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }>
+              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
               Registrarse
             </NavLink>
           </li>
