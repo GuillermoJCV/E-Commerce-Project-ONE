@@ -26,3 +26,7 @@ async function toggleTheme() {
 	root.classList.add(nextTheme)
 	root.classList.remove(currentTheme)
 }
+
+export {
+	getTheme, toggleTheme
+}
