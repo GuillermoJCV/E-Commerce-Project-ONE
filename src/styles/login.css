@@ -1,0 +1,247 @@
+.login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--radial-gradient-bg);
+}
+
+.login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        var(--background-image-1),
+        var(--background-image-2);
+    background-size: 100px 100px;
+    pointer-events: none;
+}
+
+.login__container {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 420px;
+    background: var(--login-background);
+    margin-top: 60px;
+}
+
+.login__container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.login__container span{
+    font-size: 12px;
+    color: var(--color-txt-a);
+    opacity: 0.9;
+}
+
+.login__container a {
+    color: var(--main-txt2);
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.login__container .a {
+    color: var(--color-txt-a);
+}
+.login__container button {
+    position: relative;
+    width: 50%;
+    height: 45px;
+    color: var(--main-txt);
+    font-size: 14px;
+    background: transparent;
+    border: 2px solid var(--login-border-form);
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login__container button::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: var(--login-button);
+    z-index: -1;
+    transition: .5s;
+}
+
+.login__container button:hover::before {
+    top: 0;
+}
+
+.login__container form{
+    background: transparent;
+    border: 2px solid var(--login-signIn);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 10px var(--login-signIn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.login__container input{
+    background: var(--main-txt);
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.login__container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.login__container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid var(--main-txt);
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.login__container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: var(--secondary-color);
+    height: 100%;
+    background: var(--login-second-background);
+    color:var(--main-txt);
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.login__container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.login__container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.login__container.active .toggle-right{
+    transform: translateX(200%);
+}

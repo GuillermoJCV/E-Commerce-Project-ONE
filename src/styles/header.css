@@ -1,25 +1,22 @@
+
+/* *** Intente que se quede fijo el header pero no lo logre *** */
 .header {
-  overflow: visible;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  position: relative;
-  color: #fff !important;
+  position: fixed; /* Hacer que el header se quede fijo */
+  top: 0; /* Fijar el header en la parte superior */
+  z-index: 1000; /* Asegurarse de que el header esté por encima del resto del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px;
+  background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
+  color: var(--main-txt);
+  width: 100%; /* Ocupar el ancho completo de la ventana */
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-    background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
-    color: #fff;
-  }
+
 
 /* *** Logo *** */
 .logo img {
-  width: 100px;
+  width: 80px;
   height: auto;
   aspect-ratio: 100/79;
 }
@@ -27,7 +24,7 @@
 /* Esta clase estiliza los navlinks cuando son el link activo 
 Estilicelo o borrelo si quiere, nomas es por si acaso*/
 .active {
-  background-color: green;
+  background-color: var(--third-color);
 }
 
 /* *** Search *** */
@@ -105,6 +102,7 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
 .nav ul {
   list-style-type: none;
   display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
 .nav ul li {
@@ -137,21 +135,26 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   border-radius: 5px;
 }
 
+/* *theme  */
+.theme {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centra verticalmente el icono de tema */
+}
+
+/* Estilos para el icono de tema */
+.theme img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+
 /* *** login-menu *** */
 .login-ingresar {
   display: block;
   /* Muestra el icono de hamburguesa en pantallas pequeñas */
   cursor: pointer;
-}
-
-.loginMenu {
-  display: none;
-  /* Oculta el menú en pantallas pequeñas */
-}
-
-.header,
-.loginMenu {
-  position: relative;
 }
 
 .login-menu {
@@ -213,8 +216,9 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
 }
 
 /* ***Estilos para tamaños de Tablets*** */
+/* *Cambio de 980px a 1070 */
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1070px) {
   .menu-icon {
     display: block;
     /* Muestra el icono de hamburguesa en pantallas pequeñas */
@@ -224,11 +228,6 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
   .nav ul {
     display: none;
     /* Oculta el menú en pantallas pequeñas */
-  }
-
-  .header {
-    position: relative;
-    /* Asegura que el menú se despliegue correctamente */
   }
 
   .tablet-nav {
@@ -292,15 +291,6 @@ Estilicelo o borrelo si quiere, nomas es por si acaso*/
     cursor: pointer;
   }
 
-  .loginMenu {
-    display: none;
-    /* Oculta el menú en pantallas pequeñas */
-  }
-
-  .header,
-  .loginMenu {
-    position: relative;
-  }
 
   .login-menu {
     position: absolute;

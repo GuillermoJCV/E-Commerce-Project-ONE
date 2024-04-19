@@ -1,0 +1,86 @@
+.signInContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--radial-gradient-bg);
+    margin-top: 60px;
+}
+
+.signInContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        var(--background-image-1),
+        var(--background-image-2);
+    background-size: 100px 100px;
+    pointer-events: none;
+}
+
+.signIn {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    background: var(--login-signIn);
+    box-shadow: 0 20px 40px var(--second-shadow-color);
+    transform: perspective(1000px) rotateX(5deg);
+    transition: transform 0.15s ease;
+}
+
+.signIn:hover {
+    transform: perspective(1000px) rotateX(3deg) translateY(-5px);
+}
+
+.signIn__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--third-color);
+}
+
+.signIn__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signIn__label {
+    margin-bottom: 8px;
+}
+
+.signIn__input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: solid 1px var(--mainly-color);
+    border-radius: 10px;
+    outline: none;
+}
+
+.signIn__input:hover {
+    box-shadow: 0 0 0 1px var(--mainly-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.signIn__input::placeholder {
+    color: var(--fourth-color);
+}
+
+.signIn__button {
+    padding: 10px;
+    background: var(--login-first-button);
+    color: var(--main-txt);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signIn__button:hover {
+    background: var(--login-second-button);
+}
