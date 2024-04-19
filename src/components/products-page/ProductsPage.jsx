@@ -1,8 +1,13 @@
 
 export default function ProductsPage() {
 	return (
-		<main>
-			<h1>Products</h1>
+		<main className="ProductsPage">
+			<aside className="filters">
+
+			</aside>
+			<div className="display-products">
+				
+			</div>
 		</main>
 	)
 }
