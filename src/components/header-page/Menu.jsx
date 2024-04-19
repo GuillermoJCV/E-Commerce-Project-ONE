@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { NavLink } from 'react-router-dom';
 import menuIcon from "../../assets/icons/menu-icon.png"; // Ruta relativa a la carpeta 'assets'
 import moonIcon from "../../assets/icons/moon-icon.png"; // Ruta relativa al icono de luna

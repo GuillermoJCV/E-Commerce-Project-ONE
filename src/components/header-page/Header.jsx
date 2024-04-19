@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import '../../styles/header.css';
 import Logo from '../../assets/image/logo2.png';
 import searchIcon from '../../assets/icons/search-icon.png';

@@ -21,12 +21,23 @@
 		--radial-gradient-bg: radial-gradient(circle at center, rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
 		--background-image-1: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 125%);
   		--background-image-2: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 980px);
+		
 		--login-signIn: rgba(255, 255, 255, 0.2);
-		--login-title: var(#277912);
-		--login-border-form: var(#44c61c);
+		--login-title: #277912;
+		--login-border-form: #5dff2b;
 		--login-first-button: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
 		--login-second-button: linear-gradient(45deg, #277912, #34aa13, #44c61c, #44c61c);
+		
+		--color-txt-a: #303030;
+		--login-button: linear-gradient(#34aa13, #57ed29, #34aa13, #57ed29);
+		--login-background: linear-gradient(rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
+		--login-second-background: linear-gradient(
+			to right,
+			#57ed29,
+			#34aa13,
+			#57ed29
 
+		);
 	}
 }
 
@@ -57,4 +68,8 @@
 	--main-txt: #fff;
 	--main-txt2: #000;
 	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+}
+
+:root {
+	--header-height: 5vh;
 }

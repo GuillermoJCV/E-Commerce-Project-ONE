@@ -1,11 +1,12 @@
-import React, { lazy, Suspense} from 'react';
+import { lazy, Suspense} from 'react';
 import Header from './components/header-page/Header.jsx';
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 const HomePage = lazy(() => import('./components/home-page/HomePage.jsx'))
 const ProductsPage = lazy(() => import('./components/products-page/ProductsPage.jsx'))
 const SignIn = lazy(() => import('./components/login/SignIn.jsx'))
+const Login = lazy(() => import('./components/login/Login.jsx'))
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/products" element={<ProductsPage/>}/>
             <Route path="/contact" element={<></>}/>
             <Route path="/signin" element={<SignIn/>}/>
+            <Route path="/login" element={<Login/>}/>
           </Routes>
         </Suspense>
       {/*<Footer/>*/}

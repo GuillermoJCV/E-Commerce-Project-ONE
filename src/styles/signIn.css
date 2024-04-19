@@ -18,16 +18,10 @@
     height: 100%;
     background-image:
         var(--background-image-1),
-        /* Primer gradiente lineal */
         var(--background-image-2);
-    /* Segundo gradiente lineal */
     background-size: 100px 100px;
-    /* Tamaño del patrón de luz */
     pointer-events: none;
-    /* Permitir que los eventos pasen a través del pseudo-elemento */
 }
-
-
 
 .signIn {
     position: relative;
@@ -36,19 +30,13 @@
     padding: 40px;
     border-radius: 10px;
     background: var(--login-signIn);
-    /* Color de fondo con opacidad */
     box-shadow: 0 20px 40px var(--second-shadow-color);
-    /* Sombra más pronunciada */
     transform: perspective(1000px) rotateX(5deg);
-    /* Efecto 3D y escala */
     transition: transform 0.15s ease;
-    /* Transición para el efecto de transformación */
-
 }
 
 .signIn:hover {
     transform: perspective(1000px) rotateX(3deg) translateY(-5px);
-    /* Elevación al pasar el cursor */
 }
 
 .signIn__title {
@@ -81,8 +69,6 @@
 
 .signIn__input::placeholder {
     color: var(--fourth-color);
-    /* Color del texto del placeholder */
-
 }
 
 .signIn__button {

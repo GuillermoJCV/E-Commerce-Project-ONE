@@ -1,8 +1,12 @@
+import '../../styles/product-page.css';
 
 export default function ProductsPage() {
 	return (
 		<main>
-			<h1>Products</h1>
+			<div className="product">
+				<h1>Products</h1>
+			</div>
+			
 		</main>
 	)
 }
