@@ -77,9 +77,9 @@ main button:hover::before {
 
 main form{
     background: transparent;
-    border: 2px solid var(--login-signIn);
+    border: 2px solid var(--login);
     backdrop-filter: blur(30px);
-    box-shadow: 0 4px 10px var(--login-signIn);
+    box-shadow: 0 4px 10px var(--login);
     display: flex;
     align-items: center;
     justify-content: center;
