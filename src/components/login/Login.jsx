@@ -15,11 +15,15 @@ const Login = () => {
 
     const handleRegisterClick = () => {
         containerRef.current.classList.add("active");
+        containerRef.current.classList.remove("show-sign-in");
     };
-
+    
     const handleLoginClick = () => {
         containerRef.current.classList.remove("active");
+        containerRef.current.classList.add("show-sign-in");
     };
+    
+    
 
     // Llamar a mountListeners una vez al montar el componente
     React.useLayoutEffect(() => {
@@ -50,36 +54,7 @@ const Login = () => {
     
 
     return (
-        <main ref={containerRef}>
-            <section className="form-container sign-up">
-                <form>
-                    <h1>Crear cuenta</h1>
-                    <div className="social-icons">
-                        <a href="#" className="icon">
-                            <FaGooglePlus />
-                        </a>
-                        <a href="#" className="icon">
-                            <FaFacebook />
-                        </a>
-                        <a href="#" className="icon">
-                            <FaTwitter />
-                        </a>
-                        <a href="#" className="icon">
-                            <FaLinkedin />
-                        </a>
-                        <a href="#" className="icon">
-                            <FaGithub />
-                        </a>
-                    </div>
-                    <span>Puede usar su correo electrónico</span>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button type="button" ref={registerBtnRef}>
-                        Registrarse
-                    </button>
-                </form>
-            </section>
+        <main ref={containerRef} className="main">
             <section className="form-container sign-in">
                 <form>
                     <h1>Iniciar Sesión</h1>
@@ -111,6 +86,36 @@ const Login = () => {
                     </button>
                 </form>
             </section>
+            <section className="form-container sign-up">
+                <form>
+                    <h1>Crear cuenta</h1>
+                    <div className="social-icons">
+                        <a href="#" className="icon">
+                            <FaGooglePlus />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaFacebook />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaTwitter />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaLinkedin />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaGithub />
+                        </a>
+                    </div>
+                    <span>Puede usar su correo electrónico</span>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button type="button" ref={registerBtnRef}>
+                        Registrarse
+                    </button>
+                </form>
+            </section>
+            
             <div className="toggle-container">
                 <div className="toggle">
                     <div className="toggle-panel toggle-left">
