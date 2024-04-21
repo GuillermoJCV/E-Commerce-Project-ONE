@@ -45,85 +45,81 @@ const Login = () => {
 
     return (
         <main>
-            <div className="login">
-                <div className="login__container" ref={containerRef}>
-                    <div className="form-container sign-up">
-                        <form>
-                            <h1>Crear cuenta</h1>
-                            <div className="social-icons">
-                                <a href="#" className="icon">
-                                    <FaGooglePlus />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaFacebook />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaTwitter />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaLinkedin />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaGithub />
-                                </a>
-                            </div>
-                            <span>Puede usar su correo electrónico</span>
-                            <input type="text" placeholder="Name" />
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-                            <button type="button" ref={registerBtnRef}>
-                                Registrarse
-                            </button>
-                        </form>
+            <div className="form-container sign-up">
+                <form>
+                    <h1>Crear cuenta</h1>
+                    <div className="social-icons">
+                        <a href="#" className="icon">
+                            <FaGooglePlus />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaFacebook />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaTwitter />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaLinkedin />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaGithub />
+                        </a>
                     </div>
-                    <div className="form-container sign-in">
-                        <form>
-                            <h1>Iniciar Sesión</h1>
-                            <div className="social-icons">
-                                <a href="#" className="icon">
-                                    <FaGooglePlus />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaFacebook />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaTwitter />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaLinkedin />
-                                </a>
-                                <a href="#" className="icon">
-                                    <FaGithub />
-                                </a>
-                            </div>
-                            <span>Puede usar su correo electrónico</span>
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-                            <a className="a" href="#">
-                                ¿Olvidaste tu contraseña?
-                            </a>
-                            <button type="button" ref={loginBtnRef}>
-                                Iniciar Sesión
-                            </button>
-                        </form>
+                    <span>Puede usar su correo electrónico</span>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button type="button" ref={registerBtnRef}>
+                        Registrarse
+                    </button>
+                </form>
+            </div>
+            <div className="form-container sign-in">
+                <form>
+                    <h1>Iniciar Sesión</h1>
+                    <div className="social-icons">
+                        <a href="#" className="icon">
+                            <FaGooglePlus />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaFacebook />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaTwitter />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaLinkedin />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaGithub />
+                        </a>
                     </div>
-                    <div className="toggle-container">
-                        <div className="toggle">
-                            <div className="toggle-panel toggle-left">
-                                <h1>Bienvenido de nuevo</h1>
-                                <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
-                                <button className="hidden" onClick={handleLoginClick}>
-                                    Iniciar Sesión
-                                </button>
-                            </div>
-                            <div className="toggle-panel toggle-right">
-                                <h1>Bienvenido</h1>
-                                <p>Registre sus datos personales para utilizar todas las funciones del sitio</p>
-                                <button className="hidden" onClick={handleRegisterClick}>
-                                    Registrarse
-                                </button>
-                            </div>
-                        </div>
+                    <span>Puede usar su correo electrónico</span>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a className="a" href="#">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                    <button type="button" ref={loginBtnRef}>
+                        Iniciar Sesión
+                    </button>
+                </form>
+            </div>
+            <div className="toggle-container">
+                <div className="toggle">
+                    <div className="toggle-panel toggle-left">
+                        <h1>Bienvenido de nuevo</h1>
+                        <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                        <button className="hidden" onClick={handleLoginClick}>
+                            Iniciar Sesión
+                        </button>
+                    </div>
+                    <div className="toggle-panel toggle-right">
+                        <h1>Bienvenido</h1>
+                        <p>Registre sus datos personales para utilizar todas las funciones del sitio</p>
+                        <button className="hidden" onClick={handleRegisterClick}>
+                            Registrarse
+                        </button>
                     </div>
                 </div>
             </div>

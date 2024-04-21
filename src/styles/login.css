@@ -1,28 +1,4 @@
-.login {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background: var(--radial-gradient-bg);
-}
-
-.login::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        var(--background-image-1),
-        var(--background-image-2);
-    background-size: 100px 100px;
-    pointer-events: none;
-}
-
-.login__container {
+main {
     position: absolute;
     top: 50%; 
     left: 50%; 
@@ -40,30 +16,30 @@
     margin-top: 60px;
 }
 
-.login__container p{
+main p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.login__container span{
+main span{
     font-size: 12px;
     color: var(--color-txt-a);
     opacity: 0.9;
 }
 
-.login__container a {
+main a {
     color: var(--main-txt2);
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.login__container .a {
+main .a {
     color: var(--color-txt-a);
 }
-.login__container button {
+main button {
     position: relative;
     width: 50%;
     height: 45px;
@@ -83,7 +59,7 @@
     cursor: pointer;
 }
 
-.login__container button::before {
+main button::before {
     content: "";
     position: absolute;
     top: -80%;
@@ -95,11 +71,11 @@
     transition: .5s;
 }
 
-.login__container button:hover::before {
+main button:hover::before {
     top: 0;
 }
 
-.login__container form{
+main form{
     background: transparent;
     border: 2px solid var(--login-signIn);
     backdrop-filter: blur(30px);
@@ -112,7 +88,7 @@
     height: 100%;
 }
 
-.login__container input{
+main input{
     background: var(--main-txt);
     border: none;
     margin: 8px 0;
@@ -136,7 +112,7 @@
     z-index: 2;
 }
 
-.login__container.active .sign-in{
+main.active .sign-in{
     transform: translateX(100%);
 }
 
@@ -147,7 +123,7 @@
     z-index: 1;
 }
 
-.login__container.active .sign-up{
+main.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -192,7 +168,7 @@
     z-index: 1000;
 }
 
-.login__container.active .toggle-container{
+main.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
@@ -210,7 +186,7 @@
     transition: all 0.6s ease-in-out;
 }
 
-.login__container.active .toggle{
+main.active .toggle{
     transform: translateX(50%);
 }
 
@@ -233,7 +209,7 @@
     transform: translateX(-200%);
 }
 
-.login__container.active .toggle-left{
+main.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -242,6 +218,6 @@
     transform: translateX(0);
 }
 
-.login__container.active .toggle-right{
+main.active .toggle-right{
     transform: translateX(200%);
 }
