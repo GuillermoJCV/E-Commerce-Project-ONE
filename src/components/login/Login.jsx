@@ -21,31 +21,37 @@ const Login = () => {
         containerRef.current.classList.remove("active");
     };
 
-    // Agregar event listeners al montar el componente
-    const mountListeners = () => {
-        registerBtnRef.current.addEventListener("click", handleRegisterClick);
-        loginBtnRef.current.addEventListener("click", handleLoginClick);
-    };
-
-    // Remover event listeners al desmontar el componente
-    const unmountListeners = () => {
-        registerBtnRef.current.removeEventListener("click", handleRegisterClick);
-        loginBtnRef.current.removeEventListener("click", handleLoginClick);
-    };
-
     // Llamar a mountListeners una vez al montar el componente
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
+        const mountListeners = () => {
+            if (registerBtnRef.current) {
+                registerBtnRef.current.addEventListener("click", handleRegisterClick);
+            }
+            if (loginBtnRef.current) {
+                loginBtnRef.current.addEventListener("click", handleLoginClick);
+            }
+        };
+    
+        const unmountListeners = () => {
+    if (registerBtnRef.current) {
+        registerBtnRef.current.removeEventListener("click", handleRegisterClick);
+    }
+    if (loginBtnRef.current) {
+        loginBtnRef.current.removeEventListener("click", handleLoginClick);
+    }
+};
+    
         mountListeners();
-
-        // Limpia los event listeners cuando el componente se desmonta
+    
         return () => {
             unmountListeners();
         };
-    }, []);
+    }, [registerBtnRef, loginBtnRef]); // Dependencias relevantes que pueden cambiar
+    
 
     return (
-        <main>
-            <div className="form-container sign-up">
+        <main ref={containerRef}>
+            <section className="form-container sign-up">
                 <form>
                     <h1>Crear cuenta</h1>
                     <div className="social-icons">
@@ -73,8 +79,8 @@ const Login = () => {
                         Registrarse
                     </button>
                 </form>
-            </div>
-            <div className="form-container sign-in">
+            </section>
+            <section className="form-container sign-in">
                 <form>
                     <h1>Iniciar Sesión</h1>
                     <div className="social-icons">
@@ -104,13 +110,13 @@ const Login = () => {
                         Iniciar Sesión
                     </button>
                 </form>
-            </div>
+            </section>
             <div className="toggle-container">
                 <div className="toggle">
                     <div className="toggle-panel toggle-left">
                         <h1>Bienvenido de nuevo</h1>
                         <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
-                        <button className="hidden" onClick={handleLoginClick}>
+                        <button type="button" ref={loginBtnRef}>
                             Iniciar Sesión
                         </button>
                     </div>
