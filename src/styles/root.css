@@ -4,6 +4,26 @@
 	box-sizing: border-box;
 }
 
+body {
+	position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--radial-gradient-bg);
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        var(--background-image-1),
+        var(--background-image-2);
+    background-size: 100px 100px;
+    pointer-events: none;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		--mainly-color: #44c61c;
