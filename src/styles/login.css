@@ -7,7 +7,7 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 5px 15px var(--main-box-shadow);
     overflow: hidden;
     width: 768px;
     max-width: 100%;

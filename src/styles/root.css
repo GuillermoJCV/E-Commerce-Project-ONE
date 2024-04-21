@@ -42,6 +42,7 @@ body::before {
 		--background-image-2: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 980px);
 		
 		--login: rgba(255, 255, 255, 0.2);
+		--main-box-shadow: rgba(0, 0, 0, 0.35);
 		--login-border-form: #5dff2b;
 		--color-txt-a: #303030;
 		--login-button: linear-gradient(#34aa13, #57ed29, #34aa13, #57ed29);
