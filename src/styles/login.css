@@ -1,4 +1,4 @@
-main {
+.main {
     position: absolute;
     top: 50%; 
     left: 50%; 
@@ -16,30 +16,30 @@ main {
     margin-top: 60px;
 }
 
-main p{
+.main p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-main span{
+.main span{
     font-size: 12px;
     color: var(--color-txt-a);
     opacity: 0.9;
 }
 
-main a {
+.main a {
     color: var(--main-txt2);
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-main .a {
+.main .a {
     color: var(--color-txt-a);
 }
-main button {
+.main button {
     position: relative;
     width: 50%;
     height: 45px;
@@ -59,7 +59,7 @@ main button {
     cursor: pointer;
 }
 
-main button::before {
+.main button::before {
     content: "";
     position: absolute;
     top: -80%;
@@ -71,11 +71,11 @@ main button::before {
     transition: .5s;
 }
 
-main button:hover::before {
+.main button:hover::before {
     top: 0;
 }
 
-main form{
+.main form{
     background: transparent;
     border: 2px solid var(--login);
     backdrop-filter: blur(30px);
@@ -88,7 +88,7 @@ main form{
     height: 100%;
 }
 
-main input{
+.main input{
     background: var(--main-txt);
     border: none;
     margin: 8px 0;
@@ -112,7 +112,7 @@ main input{
     z-index: 2;
 }
 
-main.active .sign-in{
+.main.active .sign-in{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -126,7 +126,7 @@ main.active .sign-in{
     z-index: 2;
 }
 
-main.active .sign-up{
+.main.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -171,7 +171,7 @@ main.active .sign-up{
     z-index: 1000;
 }
 
-main.active .toggle-container{
+.main.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
@@ -189,7 +189,7 @@ main.active .toggle-container{
     transition: all 0.6s ease-in-out;
 }
 
-main.active .toggle{
+.main.active .toggle{
     transform: translateX(50%);
 }
 
@@ -212,7 +212,7 @@ main.active .toggle{
     transform: translateX(-200%);
 }
 
-main.active .toggle-left{
+.main.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -221,6 +221,6 @@ main.active .toggle-left{
     transform: translateX(0);
 }
 
-main.active .toggle-right{
+.main.active .toggle-right{
     transform: translateX(200%);
 }

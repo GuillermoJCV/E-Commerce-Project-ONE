@@ -1,4 +1,139 @@
-import React, { useRef } from "react";
+import { useRef, useEffect } from "react";
+import {
+    FaGooglePlus,
+    FaFacebook,
+    FaTwitter,
+    FaLinkedin,
+    FaGithub,
+} from "react-icons/fa";
+import '../../styles/login.css';
+
+const Login = () => {
+    const containerRef = useRef(null);
+    const formRef = useRef(null);
+
+    const submitHandler = (event) => {
+        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+        if (formRef.current) {
+            const isValid = formRef.current.checkValidity();
+            if (isValid) {
+                console.log("El formulario se puede enviar");
+            } else {
+                console.log("El formulario no se puede enviar");
+            }
+        }
+    };
+
+    useEffect(() => {
+        const form = formRef.current;
+        if (form) {
+            form.addEventListener("submit", submitHandler);
+            return () => {
+                form.removeEventListener("submit", submitHandler);
+            };
+        }
+    }, []); // Deja las dependencias vacías para ejecutar una sola vez al montar el componente
+
+    const handleRegisterClick = () => {
+        containerRef.current.classList.add("active");
+        containerRef.current.classList.remove("show-sign-in");
+        const errorMessage = containerRef.current.querySelector('p');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    };
+
+    const handleLoginClick = () => {
+        containerRef.current.classList.remove("active");
+        containerRef.current.classList.add("show-sign-in");
+    };
+
+    return (
+        <main className="main" ref={containerRef} >
+            <section className="form-container sign-in">
+                <form ref={formRef}>
+                    <h1>Iniciar Sesión</h1>
+                    <div className="social-icons">
+                        <a href="#" className="icon">
+                            <FaGooglePlus />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaFacebook />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaTwitter />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaLinkedin />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaGithub />
+                        </a>
+                    </div>
+                    <span>Puede usar su correo electrónico</span>
+                    <input type="email" placeholder="Email" required />
+                    <input type="password" placeholder="Password" required />
+                    <a className="a" href="#">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </section>
+            <section className="form-container sign-up">
+                <form>
+                    <h1>Crear cuenta</h1>
+                    <div className="social-icons">
+                        <a href="#" className="icon">
+                            <FaGooglePlus />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaFacebook />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaTwitter />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaLinkedin />
+                        </a>
+                        <a href="#" className="icon">
+                            <FaGithub />
+                        </a>
+                    </div>
+                    <span>Puede usar su correo electrónico</span>
+                    <input type="text" placeholder="Name" required />
+                    <input type="email" placeholder="Email" required />
+                    <input type="password" placeholder="Password" required />
+                    <button type="submit">Registrarse</button>
+                </form>
+            </section>
+
+            <div className="toggle-container">
+                <div className="toggle">
+                    <div className="toggle-panel toggle-left">
+                        <h1>Bienvenido de nuevo</h1>
+                        <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                        <button className="hidden" onClick={handleLoginClick}>
+                            Iniciar Sesión
+                        </button>
+                    </div>
+                    <div className="toggle-panel toggle-right">
+                        <h1>Bienvenido</h1>
+                        <p>Registre sus datos personales para utilizar todas las funciones del sitio</p>
+                        <button className="hidden" onClick={handleRegisterClick}>
+                            Registrarse
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    );
+};
+
+export default Login;
+
+
+
+/*import React, { useRef } from "react";
 import {
     FaGooglePlus,
     FaFacebook,
@@ -125,9 +260,9 @@ const Login = () => {
                         </a>
                     </div>
                     <span>Puede usar su correo electrónico</span>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="text" placeholder="Name" required="true" />
+                    <input type="email" placeholder="Email" required="true" />
+                    <input type="password" placeholder="Password" required="true" />
                     <button type="button" ref={registerBtnRef}>
                         Registrarse
                     </button>
@@ -158,6 +293,7 @@ const Login = () => {
 };
 
 export default Login;
+*/
 
 
 /*import React, { useRef } from "react";
