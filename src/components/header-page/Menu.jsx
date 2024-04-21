@@ -68,26 +68,6 @@ function Menu({ toggleShowClass, loginMenuRef }) {
           </li>
         </ul>
       </nav>
-
-      {/* Renderizar el menú de ingreso */}
-      <nav ref={loginMenuRef} className="loginMenu login-menu">
-        <ul>
-          <li>
-            <NavLink
-              to="/signin"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-              Iniciar sesión
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/signup"
-              className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-              Registrarse
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 }
