@@ -16,6 +16,14 @@ const Login = () => {
     const handleRegisterClick = () => {
         containerRef.current.classList.add("active");
         containerRef.current.classList.remove("show-sign-in");
+    
+        // Obtener el mensaje de error si existe
+        const errorMessage = containerRef.current.querySelector('p');
+        
+        // Si hay un mensaje de error, eliminarlo
+        if (errorMessage) {
+            errorMessage.remove();
+        }
     };
 
     const handleLoginClick = () => {
@@ -40,7 +48,6 @@ const Login = () => {
             console.log("Inicio de sesión exitoso");
         }
     };
-
 
     // Llamar a mountListeners una vez al montar el componente
     React.useLayoutEffect(() => {
