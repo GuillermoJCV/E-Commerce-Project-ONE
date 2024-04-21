@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "http://guillermojcv.github.io/E-Commerce-Project-ONE",
   "scripts": {
-    "start": "vite",
+    "start": "vite --port 3003",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
