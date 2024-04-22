@@ -14,14 +14,7 @@ const Login = () => {
 
     const submitHandler = (event) => {
         event.preventDefault(); // Evita que el formulario se envíe automáticamente
-        if (formRef.current) {
-            const isValid = formRef.current.checkValidity();
-            if (isValid) {
-                console.log("El formulario se puede enviar");
-            } else {
-                console.log("El formulario no se puede enviar");
-            }
-        }
+        
     };
 
     useEffect(() => {
@@ -37,9 +30,9 @@ const Login = () => {
     const handleRegisterClick = () => {
         containerRef.current.classList.add("active");
         containerRef.current.classList.remove("show-sign-in");
-        const errorMessage = containerRef.current.querySelector('p');
-        if (errorMessage) {
-            errorMessage.remove();
+        const registerMessage = containerRef.current.querySelector('p');
+        if (registerMessage) {
+            registerMessage.style.display = 'block';
         }
     };
 
@@ -71,12 +64,12 @@ const Login = () => {
                         </a>
                     </div>
                     <span>Puede usar su correo electrónico</span>
-                    <input type="email" placeholder="Email" required />
-                    <input type="password" placeholder="Password" required />
+                    <input type="email" placeholder="Ingresar el correo" required />
+                    <input type="password" placeholder="Ingresar la contraseña" required />
                     <a className="a" href="#">
                         ¿Olvidaste tu contraseña?
                     </a>
-                    <button type="submit">Iniciar Sesión</button>
+                    <button id="bt-sign-in" type="submit">Iniciar Sesión</button>
                 </form>
             </section>
             <section className="form-container sign-up">
@@ -111,7 +104,7 @@ const Login = () => {
                 <div className="toggle">
                     <div className="toggle-panel toggle-left">
                         <h1>Bienvenido de nuevo</h1>
-                        <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                        <p> Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
                         <button className="hidden" onClick={handleLoginClick}>
                             Iniciar Sesión
                         </button>
@@ -130,7 +123,6 @@ const Login = () => {
 };
 
 export default Login;
-
 
 
 /*import React, { useRef } from "react";
