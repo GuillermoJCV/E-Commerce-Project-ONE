@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import moonIcon from "../../../assets/icons/moon-icon.png"
 import { toggleTheme } from "../../../utils/toggleTheme.js"
+import { toggleShowClass } from "../../../utils/headerUtils/toggleShowClass.js"
 
-export default function NavList() {
+export default function NavList({loginMenuRef}) {
 	return (
 		<ul>
           <li>

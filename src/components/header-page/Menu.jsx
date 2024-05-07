@@ -1,9 +1,13 @@
 import { useRef } from "react";
 import menuIcon from "../../assets/icons/menu-icon.png"
 import NavList from "./navList/NavList.jsx";
+import { toggleShowClass } from "../../utils/headerUtils/toggleShowClass.js"
 
-function Menu({ toggleShowClass, loginMenuRef }) {
-  const menuRef = useRef(); // Ref para el menú
+function Menu() {
+  const menuRef = useRef(null); // Ref para el menú
+  //const loginMenuRef = useRef(null); // Ref para el menú de ingreso
+
+
 
   return (
     <div>

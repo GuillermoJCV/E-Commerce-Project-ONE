@@ -4,7 +4,6 @@ import Logo from '../../assets/image/logo2.png';
 import searchIcon from '../../assets/icons/search-icon.png';
 import Menu from './Menu';
 function Header() {
-  const loginMenuRef = useRef(); // Ref para el menú de ingreso
 
   // Función para alternar la visibilidad de los elementos
   const toggleShowClass = (ref) => {
@@ -28,10 +27,7 @@ function Header() {
         </div>
       </div>
 
-      <Menu
-        toggleShowClass={toggleShowClass}
-        loginMenuRef={loginMenuRef}
-      />
+      <Menu/>
     </header>
   );
 }
