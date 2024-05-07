@@ -24,6 +24,7 @@ body::before {
     pointer-events: none;
 }
 
+
 @media (prefers-color-scheme: light) {
 	:root {
 		--mainly-color: #44c61c;
