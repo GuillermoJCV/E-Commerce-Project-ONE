@@ -25,11 +25,6 @@ const Login = () => {
             };
         }
     }, []); 
-
-    useEffect(() => {
-        containerRef.current.classList.add("show-sign-in");
-    }, []);
-    
     const handleRegisterClick = () => {
         containerRef.current.classList.add("active");
         containerRef.current.classList.remove("show-sign-in");
