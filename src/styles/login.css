@@ -67,7 +67,7 @@
     height: 300%;
     background: var(--login-button);
     z-index: -1;
-    transition: .5s;
+    transition: all 250ms;
 }
 
 .main button:hover::before {
