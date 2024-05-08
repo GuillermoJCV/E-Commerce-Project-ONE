@@ -11,6 +11,7 @@
   background: var(--header-bg); /* Utilizar la variable CSS para el fondo del header */
   color: var(--main-txt);
   width: 100%; /* Ocupar el ancho completo de la ventana */
+  height: var(--header-height);
 }
 
 
