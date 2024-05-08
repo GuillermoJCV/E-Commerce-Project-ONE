@@ -34,6 +34,10 @@ const Login = () => {
         }
     };
 
+    useEffect(() => {
+        containerRef.current.classList.add("show-sign-in");
+    }, []);
+
     const handleLoginClick = () => {
         containerRef.current.classList.remove("active");
         containerRef.current.classList.add("show-sign-in");
