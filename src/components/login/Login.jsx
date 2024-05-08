@@ -38,7 +38,7 @@ const Login = () => {
         containerRef.current.classList.remove("active");
         containerRef.current.classList.add("show-sign-in");
     };
-    // PRUEBA 
+    // Ya muestra inicio de sesión
     return (
         <main className="main" ref={containerRef} >
             <section className="form-container sign-in">
