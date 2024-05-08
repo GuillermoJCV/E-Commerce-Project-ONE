@@ -6,7 +6,7 @@ import {
     FaLinkedin,
     FaGithub,
 } from "react-icons/fa";
-import '../../styles/login.css';
+import "../../styles/login.css";
 
 const Login = () => {
     const containerRef = useRef(null);
@@ -24,13 +24,13 @@ const Login = () => {
                 form.removeEventListener("submit", submitHandler);
             };
         }
-    }, []); 
+    }, []);
     const handleRegisterClick = () => {
         containerRef.current.classList.add("active");
         containerRef.current.classList.remove("show-sign-in");
-        const registerMessage = containerRef.current.querySelector('p');
+        const registerMessage = containerRef.current.querySelector("p");
         if (registerMessage) {
-            registerMessage.style.display = 'block';
+            registerMessage.style.display = "block";
         }
     };
 
@@ -44,7 +44,7 @@ const Login = () => {
     };
     // Ya muestra inicio de sesión
     return (
-        <main className="main" ref={containerRef} >
+        <main className="main" ref={containerRef}>
             <section className="form-container sign-in">
                 <form ref={formRef}>
                     <h1>Iniciar Sesión</h1>
@@ -67,11 +67,17 @@ const Login = () => {
                     </div>
                     <span>Puede usar su correo electrónico</span>
                     <input type="email" placeholder="Ingresar el correo" required />
-                    <input type="password" placeholder="Ingresar la contraseña" required />
+                    <input
+                        type="password"
+                        placeholder="Ingresar la contraseña"
+                        required
+                    />
                     <a className="a" href="#">
                         ¿Olvidaste tu contraseña?
                     </a>
-                    <button id="bt-sign-in" type="submit">Iniciar Sesión</button>
+                    <button id="bt-sign-in" type="submit">
+                        Iniciar Sesión
+                    </button>
                 </form>
             </section>
             <section className="form-container sign-up">
@@ -102,24 +108,30 @@ const Login = () => {
                 </form>
             </section>
 
-            <div className="toggle-container">
-                <div className="toggle">
-                    <div className="toggle-panel toggle-left">
+            <section className="toggle-container">
+                <section className="toggle">
+                    <article className="toggle-panel toggle-left">
                         <h1>Bienvenido de nuevo</h1>
-                        <p> Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                        <p>
+                            Ingrese sus datos personales para utilizar todas las funciones del
+                            sitio
+                        </p>
                         <button className="hidden" onClick={handleLoginClick}>
                             Iniciar Sesión
                         </button>
-                    </div>
-                    <div className="toggle-panel toggle-right">
+                    </article>
+                    <article className="toggle-panel toggle-right">
                         <h1>Bienvenido</h1>
-                        <p>Registre sus datos personales para utilizar todas las funciones del sitio</p>
+                        <p>
+                            Registre sus datos personales para utilizar todas las funciones
+                            del sitio
+                        </p>
                         <button className="hidden" onClick={handleRegisterClick}>
                             Registrarse
                         </button>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </section>
         </main>
     );
 };
