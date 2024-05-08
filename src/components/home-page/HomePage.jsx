@@ -62,6 +62,118 @@ export default function HomePage() {
 						</figcaption>
 					</figure>
 				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
+				<article className="card">
+					<figure className="card" alt="Producto">
+						<img
+							className="card-container--img"
+							width="100%"
+							height="60%"
+							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							alt="Producto 1"
+						/>
+						<figcaption className="card-container--info">
+							<p className="card-container--title">PC HP</p>
+						</figcaption>
+					</figure>
+				</article>
 			</section>
 
 
