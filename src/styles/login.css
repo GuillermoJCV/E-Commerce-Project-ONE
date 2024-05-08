@@ -77,7 +77,6 @@
 .main form{
     background: transparent;
     border: 2px solid var(--login);
-    backdrop-filter: blur(30px);
     box-shadow: 0 4px 10px var(--login);
     display: flex;
     align-items: center;
@@ -106,13 +105,17 @@
 }
 
 .sign-in{
+    opacity: 0;
     left: 0;
     width: 50%;
     z-index: 2;
+    transform: translateX(100%);
+    transition: opacity 700ms, transform 500ms;
 }
 
-.main.active .sign-in{
-    transform: translateX(100%);
+.main.show-sign-in .sign-in{
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 .sign-up{
@@ -120,6 +123,8 @@
     width: 50%;
     opacity: 0;
     z-index: 1;
+    transform: translateX(0%);
+    transition: opacity 500ms, transform 500ms;
 }
 
 .main.active .sign-up{
