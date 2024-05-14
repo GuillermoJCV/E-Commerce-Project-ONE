@@ -7,7 +7,6 @@
 body {
 	position: relative;
     height: 100vh;
-    overflow: hidden;
     background: var(--radial-gradient-bg);
 }
 body::before {
@@ -108,5 +107,9 @@ body::before {
 }
 
 :root {
-	--header-height: 5vh;
+	--header-height: 6rem;
+}
+
+main {
+	margin-top: var(--header-height);
 }
