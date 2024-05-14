@@ -1,3 +1,5 @@
+import "../../styles/contactsPage.css"
+
 
 export default function ContactsPage() {
 
