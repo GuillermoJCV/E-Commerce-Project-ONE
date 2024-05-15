@@ -3,7 +3,7 @@ import '../../styles/homePage.css';
 export default function HomePage() {
 
 	return (
-		<main>
+		<main className="HomePage">
 			<section className="category">
 				<h2 className='full-width'>Sugerencias de Productos</h2>
 				<article className="card">
