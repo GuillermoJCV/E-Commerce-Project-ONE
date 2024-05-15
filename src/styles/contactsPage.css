@@ -1,0 +1,32 @@
+.ContactsPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ContactsPage__contacts {
+	display: grid;
+	width: 100%;
+	padding: 2rem;
+	gap: 2rem;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ContactsPage__contacts__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: black;
+}
+
+.ContactsPage__contacts__card > figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ContactsPage__contacts__card > figure > img {
+	aspect-ratio: 1/1;
+	height: clamp(3rem, 20vw, 10rem);
+}
