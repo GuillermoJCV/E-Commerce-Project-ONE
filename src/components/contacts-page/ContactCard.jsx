@@ -1,9 +1,18 @@
 
-function ContactCard() {
+function ContactCard({imgUrl, name, portfolioUrl, children}) {
 
 	return(
-		<section class="contact__card">
-			
+		<section className="ContactsPage__contacts__card">
+			<figure>
+				<img src={imgUrl} alt={"Perfil de " + name}/>
+				<figcaption>
+					{name}
+				</figcaption>
+			</figure>
+			<ul>
+				{children}
+			</ul>
+			<a href={portfolioUrl} onClick={(e) => e.preventDefault()}>Link a su perfil</a>
 		</section>
 	)
 }
