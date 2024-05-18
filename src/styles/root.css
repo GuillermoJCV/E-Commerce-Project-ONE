@@ -48,13 +48,15 @@ body::before {
 		--login-border-form: #5dff2b;
 		--color-txt-a: #303030;
 		--login-button: linear-gradient(#34aa13, #57ed29, #34aa13, #57ed29);
-		--login-background: linear-gradient(rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
+		--login-background: linear-gradient(rgba(16, 9, 9, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
 		--login-second-background: linear-gradient(
 			to right,
 			#5dff2b,
 			#44c61c,
 			#5dff2b
 		);
+		--homepage-bg: #fefefd;
+		--category-bg: #f9f9f9;	
 	}
 }
 

@@ -7,7 +7,8 @@ export default function HomePage() {
 			<section className="category">
 				<h2 className='full-width'>Sugerencias de Productos</h2>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -16,26 +17,30 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
+							<p className="card-category">Tecnología </p>
 							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
 							height="60%"
-							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
+							src="https://1700digital.com/wp-content/uploads/pccompleta2.jpg"
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">Laptop Samsun</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -44,12 +49,14 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -58,12 +65,14 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -72,12 +81,14 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -86,12 +97,14 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -100,12 +113,14 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -114,12 +129,14 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -128,12 +145,15 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
+				
 				<article className="card">
-					<figure className="card" alt="Producto">
+					<figure  alt="Producto">
+						
 						<img
 							className="card-container--img"
 							width="100%"
@@ -142,35 +162,8 @@ export default function HomePage() {
 							alt="Producto 1"
 						/>
 						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
-						</figcaption>
-					</figure>
-				</article>
-				<article className="card">
-					<figure className="card" alt="Producto">
-						<img
-							className="card-container--img"
-							width="100%"
-							height="60%"
-							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
-							alt="Producto 1"
-						/>
-						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
-						</figcaption>
-					</figure>
-				</article>
-				<article className="card">
-					<figure className="card" alt="Producto">
-						<img
-							className="card-container--img"
-							width="100%"
-							height="60%"
-							src="https://app.pardux.com/render/img-webp/107/premiumtech/Mesa-de-tr-653157614441c"
-							alt="Producto 1"
-						/>
-						<figcaption className="card-container--info">
-							<p className="card-container--title">PC HP</p>
+							<p className="card-category">Tecnología </p>
+							<p className="card-container--title">Laptop HP 123</p>
 						</figcaption>
 					</figure>
 				</article>
