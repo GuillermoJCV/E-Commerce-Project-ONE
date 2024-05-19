@@ -1,15 +1,8 @@
-import { useRef } from 'react';
 import '../../styles/header.css';
 import Logo from '../../assets/image/logo2.png';
 import searchIcon from '../../assets/icons/search-icon.png';
 import Menu from './Menu';
 function Header() {
-
-  // Función para alternar la visibilidad de los elementos
-  const toggleShowClass = (ref) => {
-    ref.current.classList.toggle("show")
-  };
-
   return (
     <header className="header">
       {/* Sección del logo */}
