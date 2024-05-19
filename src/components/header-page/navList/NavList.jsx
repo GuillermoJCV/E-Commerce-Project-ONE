@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import moonIcon from "../../../assets/icons/moon-icon.png"
 import { toggleTheme } from "../../../utils/toggleTheme.js"
 import { toggleShowClass } from "../../../utils/headerUtils/toggleShowClass.js"
+import { BsFillMoonStarsFill } from "react-icons/bs";
 
 // eslint-disable-next-line react/prop-types
 export default function NavList({loginMenuRef}) {
@@ -47,7 +47,8 @@ export default function NavList({loginMenuRef}) {
 
           {/* Ingresar icono para cambiar de tema de claro a oscuro */}
           <li className="theme" onClick={toggleTheme}>
-            <img src={moonIcon} alt="Icono" />
+            {/* <img src={moonIcon} alt="Icono" /> */}
+            <BsFillMoonStarsFill className="icon-large"/>
           </li>
         </ul>
 	)
