@@ -28,14 +28,16 @@ body::before {
 
 @media (prefers-color-scheme: light) {
 	:root {
+		--primary-color: #4d4c4c;
 		--mainly-color: #44c61c;
 		--secondary-color: #34aa13;
-		--third-color: #277912;
+		--third-color: #53ae32;
 		--fourth-color: #aaaaaa;
 		--fifth-color: #F3DB11;
 		--main-txt: #fff;
 		--main-txt2: #000;
-		--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+		--header-bg: linear-gradient(45deg, #a4e98b, #86e165, #68da3e, #53ae32);
+		--header-btn: #a4e98b;
 		--first-shadow-color: rgba(0, 0, 0, 0.5);
 		--second-shadow-color: rgba(0, 0, 0, 0.4);
 		
@@ -55,8 +57,9 @@ body::before {
 			#44c61c,
 			#5dff2b
 		);
-		--homepage-bg: #fefefd;
-		--category-bg: #f9f9f9;	
+		--homepage-bg: #e1f8d8;
+		--category-bg: #ffffff;
+		--card-info: #f9f9f9;	
 	}
 }
 

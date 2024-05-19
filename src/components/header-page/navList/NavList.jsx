@@ -3,6 +3,7 @@ import moonIcon from "../../../assets/icons/moon-icon.png"
 import { toggleTheme } from "../../../utils/toggleTheme.js"
 import { toggleShowClass } from "../../../utils/headerUtils/toggleShowClass.js"
 
+// eslint-disable-next-line react/prop-types
 export default function NavList({loginMenuRef}) {
 	return (
 		<ul>
