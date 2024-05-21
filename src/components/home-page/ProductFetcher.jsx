@@ -1,37 +1,31 @@
-import { useEffect, useState } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { productList } from '../../services/productServices';
 
-const ProductFetcher = ({ children }) => {
-    const [products, setProducts] = useState([]);
-    const [error, setError] = useState(null);
+class ProductFetcher extends Component {
+    state = {
+        products: [],
+        error: null,
+    };
 
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const listProducts = await productList();
-                if (Array.isArray(listProducts)) {
-                    setProducts(listProducts);
-                } else {
-                    throw new Error('La API no devolvió una lista de productos válida');
-                }
-            } catch (err) {
-                setError('No fue posible cargar la lista de productos');
-                console.error('Error fetching products:', err);
-            }
-        };
-        fetchProducts();
-    }, []);
+    componentDidMount() {
+        fetch('https://663bae1afee6744a6ea28e1a.mockapi.io/products')
+            .then(response => response.json())
+            .then(data => this.setState({ products: data }))
+            .catch(() => this.setState({ error: 'Error fetching products' }));
+    }
 
-    return children(products, error);
-};
+    render() {
+        const { children } = this.props;
+        const { products, error } = this.state;
+        return children(products, error);
+    }
+}
 
 ProductFetcher.propTypes = {
     children: PropTypes.func.isRequired,
 };
 
 export default ProductFetcher;
-
 
 
 

@@ -77,3 +77,132 @@ figure {
     margin-top: 0.5rem;
     font-size: 1rem;
 }
+/* *Carousel */
+/* Añade estos estilos a src/styles/homePage.css */
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-button:first-of-type {
+    left: 10px;
+}
+
+.carousel-button:last-of-type {
+    right: 10px;
+}
+
+.carousel-content {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-slide {
+    flex: 1 0 20%; /* 20% width to show 5 items per view */
+    max-width: 20%; /* Ensure each item does not exceed 20% of the container width */
+    transition: transform 0.5s ease;
+}
+
+.card-container--img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Otros estilos existentes */
+.HomePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--homepage-bg);
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    box-shadow: 4px 4px  4px 4px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    margin: 10px;
+    background: var(--category-bg);
+}
+
+.full-width {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background: transparent;
+    padding: 10px 0 0 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(1.4);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container--img {
+    width: 100px;
+    height: 100px;
+}
+
+.card-container--info {
+    width: 100%;
+    color: var(--third-color);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    margin: 0;
+    padding: 15px;
+}
+
+.card-category {
+    color: var(--main-txt2);
+    font-weight: 500;
+    font-family: 'Arial Narrow';
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-family: 'Arial Narrow';
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
