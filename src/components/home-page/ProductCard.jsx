@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '../../styles/homePage.css';
 
-function ProductCard({ name, price, image }) {
+function ProductCard({ name,  image }) {
     return (
         <article className="card">
             <figure>
@@ -13,7 +13,6 @@ function ProductCard({ name, price, image }) {
                 <figcaption className="card-container--info">
                     <p className="card-category">Producto</p>
                     <p className="card-title">{name}</p>
-                    <p className="card-price">${price}</p>
                 </figcaption>
             </figure>
         </article>
@@ -22,7 +21,6 @@ function ProductCard({ name, price, image }) {
 
 ProductCard.propTypes = {
     name: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
 };
 
