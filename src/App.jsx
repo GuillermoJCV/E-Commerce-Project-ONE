@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Header/>
         {/* TODO: Este div luego se tiene que cambiar por un componente loader */}
-        <Suspense fallback={<div>Cargando...</div>}>
+        <Suspense fallback={<div role="loader">Cargando...</div>}>
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/products" element={<ProductsPage/>}/>
