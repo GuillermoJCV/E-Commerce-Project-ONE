@@ -1,5 +1,7 @@
 # <p align="center">PROYECTO LEAFY SHOP E-COMMERCE</p>
 
+<img src="public/octocat-elegante-para-el-readme.png" alt="octocat-image" width=200 height=200/>
+
 Este es un proyecto hecho por personas que están estudiando en Alura y algunos otros que quisieron participar en su creación, sin embargo, cualquiera puede aportar al proyecto
 A todos los que participen se les dará crédito, es un proyecto sin ánimo de lucro.
 
