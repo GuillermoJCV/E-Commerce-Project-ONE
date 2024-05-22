@@ -1,9 +1,9 @@
-### PROYECTO LEAFY SHOP E-COMMERCE
+# <p align="center">PROYECTO LEAFY SHOP E-COMMERCE</p>
 
 Este es un proyecto hecho por personas que están estudiando en Alura y algunos otros que quisieron participar en su creación, sin embargo, cualquiera puede aportar al proyecto
 A todos los que participen se les dará crédito, es un proyecto sin ánimo de lucro.
 
-##Reglas:
+## Reglas:
 
 Especialmente para llevar el orden, no se pueden modificar los archivos que son de uso general
 - Archivos en la carpeta de utils
@@ -12,7 +12,7 @@ Especialmente para llevar el orden, no se pueden modificar los archivos que son 
 - Los archivos que se encuentran enla carpeta **tests**
 - Se pueden guardar imagenes en **assets** pero nunca borrar (Estas imagenes tienen que pasar por un compresor de imagenes como `https://tinyjpg.com/`)
 
-Para comenzar a codificar primero deben de tomar una tarea en nuestro proyecto de Jira y luego empezar para no interferir con el trabajo de otros.
+Para comenzar a codificar primero deben de tomar una tarea en nuestro proyecto de  [Jira](https://leafy-shop.atlassian.net/jira/software/projects/LSP/boards/1) y luego empezar para no interferir con el trabajo de otros.
 
 Para los commits deben ser muy especificos con los cambios que hicieron. Entre más especificos sean mejor, por ejemplo:
 
