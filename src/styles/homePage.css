@@ -12,8 +12,8 @@
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    box-shadow: 4px 4px  4px 4px rgba(0, 0, 0, 0.1);
-    width: 95%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
     margin: 10px;
     background: var(--category-bg);
 }
@@ -23,10 +23,9 @@
     color: var(--third-color);
     font-size: 1.7rem;
     width: 100%;
-    margin-bottom: 15px;
 }
 
-/* *Carousel */
+/* ** Carousel */
 
 .carousel-container {
     display: flex;
@@ -34,9 +33,12 @@
     justify-content: center;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
+
 .carousel-button {
     background-color: transparent;
+    color: var(--secondary-color);
     border: none;
     font-size: 2rem;
     cursor: pointer;
@@ -44,36 +46,34 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    color: var(--third-color);
 }
+
 .carousel-button:hover {
     scale: 1.05;
-	filter: brightness(1.3);
+	filter: brightness(2.4);
 }
+
 .carousel-button:first-of-type {
     left: 10px;
 }
+
 .carousel-button:last-of-type {
     right: 10px;
 }
+
 .carousel-content {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    justify-content: center;
-}
-.carousel-slide {
-    flex: 1 0 20%; 
-    max-width: 12%; 
     transition: transform 0.5s ease;
-    margin: 10px;
-}
-.card-container--img {
-    width: 100%;
-    height: auto;
 }
 
-/* *Card */
+.carousel-slide {
+    flex: 0 0 auto; 
+    width: 20%; 
+    padding: 0 10px; 
+    box-sizing: border-box;
+}
+
+/* ** Card */
 
 .card {
     display: flex;
@@ -84,11 +84,12 @@
     height: fit-content;
     background: transparent;
     padding: 10px 0 0 0;
+    margin: 30px;
 }
 
 .card:hover {
     transform: scale(1.05);
-    filter: brightness(1.4);
+    filter: brightness(1);
 }
 
 figure {
@@ -99,16 +100,15 @@ figure {
 }
 
 .card-container--img {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
 }
 
 .card-container--info {
     width: 100%;
-    height: 100%;
     color: var(--third-color);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
     margin: 0;
@@ -125,6 +125,8 @@ figure {
     color: var(--secondary-color);
     font-weight: 600;
     font-family: 'Arial Narrow';
+    text-align: center;
     margin-top: 0.5rem;
     font-size: 1rem;
 }
+

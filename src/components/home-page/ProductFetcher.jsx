@@ -1,5 +1,7 @@
+// src/components/ProductFetcher.jsx
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { productList } from '../../services/productServices.js';
 
 class ProductFetcher extends Component {
     state = {
@@ -8,8 +10,7 @@ class ProductFetcher extends Component {
     };
 
     componentDidMount() {
-        fetch('https://663bae1afee6744a6ea28e1a.mockapi.io/products')
-            .then(response => response.json())
+        productList()
             .then(data => this.setState({ products: data }))
             .catch(() => this.setState({ error: 'Error fetching products' }));
     }

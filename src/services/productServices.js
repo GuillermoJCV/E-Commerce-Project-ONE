@@ -1,5 +1,5 @@
 export const productList = () => {
-    return fetch("https://663bae1afee6744a6ea28e1a.mockapi.io/products/")
+    return fetch("https://api-v3-alurageek.vercel.app/api/products")
         .then((res) => {
             if (!res.ok) {
                 throw new Error('Network response was not ok');
