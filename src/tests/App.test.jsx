@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest'
+import userEvent from "@testing-library/user-event"
 import { render, screen, cleanup, fireEvent } from '@testing-library/react'
 import App from '../App.jsx'
 
@@ -16,21 +17,39 @@ describe("App", () => {
 		render(<App/>)
 		screen.getByRole('loader')
 	})*/
-	it("Deberia renderizar el contenido de la pagina", () => {
+	it("Deberia renderizar el contenido de la pagina", async () => {
 		render(<App/>)
-		screen.findByRole('main')
+		await screen.findByRole('main')
 	})
-	it("Deberia renderizar el HomePage", () => {
+	it("Deberia renderizar el HomePage", async () => {
 		render(<App/>)
-		screen.findByText('Sugerencias de Productos')
+		await screen.findByText('Sugerencias de Productos')
 	})
-	it("Deberia renderizar el Login", () => {
+	it("Deberia renderizar la página de productos al dar click", async () => {
 		render(<App/>)
-		fireEvent(
-			screen.getByText("Ingresar"),
-			new MouseEvent('click')
-			)
-		screen.findAllByRole('form')
-		// Asegurarnos que solo hayan dos form
+		await userEvent.click(screen.getByText("Productos"))
+		const element = await screen.findByRole('main')
+		expect(element.className).toContain("ProductsPage")
 	})
+	it("Deberia renderizar la página de contactos al dar click", async () => {
+		render(<App/>)
+		await userEvent.click(screen.getByText("Contacto"))
+		const element = await screen.findByRole('main')
+		expect(element.className).toContain("ContactsPage")
+	})
+/*	it("Deberia renderizar la página de Sobre Nosotros al dar click", async () => {
+		render(<App/>)
+		await userEvent.click(screen.getByText("Sobre nosotros"))
+		const element = await screen.findByRole('main')
+		expect(element.className).toContain("AboutUsPage")
+		// Añadir la página de sobre nosotros
+	})*/
+/*	it("Deberia renderizar la página del Login al dar click", async () => {
+		render(<App/>)
+		await userEvent.click(screen.getByText("Ingresar"))
+		const element = await screen.findByRole('main')
+		expect(element.className).toContain("LoginPage")
+		// Cambiar la clase del main del Login
+		// main --> LoginPage
+	})*/
 })
