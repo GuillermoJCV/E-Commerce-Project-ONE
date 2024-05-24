@@ -14,11 +14,12 @@
     "deploy:github": "vite build && gh-pages -d dist/"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.5.2",
+    "gh-pages": "6.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "5.1.0",
     "react-router-dom": "6.22.3",
-    "gh-pages": "6.1.1",
     "zustand": "4.5.2"
   },
   "devDependencies": {
@@ -30,7 +31,6 @@
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-refresh": "0.4.6",
-    
     "happy-dom": "14.5.1",
     "vite": "5.2.0",
     "vitest": "1.4.0"
