@@ -2,7 +2,6 @@ import { useRef } from "react";
 import '../../styles/header.css';
 import Logo from '../../assets/image/logo2.png';
 import { FcSearch } from "react-icons/fc";
-
 import NavList from "./navList/NavList.jsx";
 import { toggleShowClass } from "../../utils/headerUtils/toggleShowClass.js"
 

@@ -99,28 +99,25 @@ figure {
 
 .card-container--info {
     width: 100%;
-    color: var(--third-color);
     font-size: 1rem;
     font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
     margin: 0;
     padding: 15px;
+    font-family: 'Arial Narrow';
 }
 
 .card-category {
     color: var(--main-txt2);
     font-weight: 500;
-    font-family: 'Arial Narrow';
 }
 
 .card-title {
     color: var(--secondary-color);
     font-weight: 600;
-    font-family: 'Arial Narrow';
     text-align: center;
     margin-top: 0.5rem;
-    font-size: 1rem;
 }
 
 /* *Media queries */

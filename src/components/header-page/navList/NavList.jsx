@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { toggleTheme } from "../../../utils/toggleTheme.js"
 import { toggleShowClass } from "../../../utils/headerUtils/toggleShowClass.js"
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import '../../../styles/header.css';
 
 // eslint-disable-next-line react/prop-types
 export default function NavList({loginMenuRef}) {

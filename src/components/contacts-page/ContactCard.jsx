@@ -12,7 +12,7 @@ function ContactCard({imgUrl, name, portfolioUrl, children}) {
 			<ul>
 				{children}
 			</ul>
-			<a href={portfolioUrl} onClick={(e) => e.preventDefault()}>Link a su perfil</a>
+			<a href={portfolioUrl}>Link a su perfil</a>
 		</section>
 	)
 }

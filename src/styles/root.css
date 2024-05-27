@@ -10,7 +10,7 @@ body {
 	position: relative;
     min-height: 100vh;
     height: fit-content;
-    background: var(--radial-gradient-bg);
+    background: var(--bg-color);
 }
 body::before {
     content: '';
@@ -28,38 +28,28 @@ body::before {
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--primary-color: #4d4c4c;
-		--mainly-color: #44c61c;
-		--secondary-color: #34aa13;
-		--third-color: #53ae32;
-		--fourth-color: #aaaaaa;
-		--fifth-color: #F3DB11;
-		--main-txt: #fff;
-		--main-txt2: #000;
-		--header-bg: linear-gradient(45deg, #a4e98b, #86e165, #68da3e, #53ae32);
-		--header-btn: #a4e98b;
-		--first-shadow-color: rgba(0, 0, 0, 0.5);
-		--second-shadow-color: rgba(0, 0, 0, 0.4);
-		
-		--radial-gradient-bg: radial-gradient(circle at center, rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
-		--background-image-1: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 125%);
-		--background-image-2: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 980px);
-		
-		--login: rgba(255, 255, 255, 0.2);
-		--main-box-shadow: rgba(0, 0, 0, 0.35);
-		--login-border-form: #5dff2b;
-		--color-txt-a: #303030;
-		--login-button: linear-gradient(#34aa13, #57ed29, #34aa13, #57ed29);
-		--login-background: linear-gradient(rgba(16, 9, 9, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
-		--login-second-background: linear-gradient(
-			to right,
-			#5dff2b,
-			#44c61c,
-			#5dff2b
-		);
-		--homepage-bg: #e1f8d8;
-		--category-bg: #ffffff;
-		--card-info: #f9f9f9;	
+		--primary-color: #E1F8D8; 
+		--secondary-color: #A4E98B;
+		--tertiary-color: #86E165; 
+		--quaternary-color: #68DA3E;
+		--quinary-color: #53AE32;
+		--senary-color: #FFFFFF;
+		--border-color: #AAAAAA; 
+		--text-a-color: #303030; 
+		/* *Colores transparentes */
+		--transparent: rgba(242, 116, 116, 0); 
+		--tr-secondary-color: rgba(0, 0, 0, 0.5);
+		--tr-tertiary-color: rgba(0, 0, 0, 0.4);
+
+		--header-bg-color: #3D6946;
+		/*--header-bg-color: linear-gradient(to right, 
+												var(--primary-color) 0%,  
+												var(--quinary-color) 70%);*/
+		/*--bg-color: #FEFEFE;*/
+		--bg-color: #fafffa;
+		/*--bg-color: #efffee;*/
+
+
 	}
 }
 

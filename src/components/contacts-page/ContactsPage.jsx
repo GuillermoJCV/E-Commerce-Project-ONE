@@ -10,11 +10,13 @@ export default function ContactsPage() {
 	const urls = {
 		memo	: {
 			img : "https://robohash.org/2542S?set=set4",
-			name : "Guillermo Jesús"
+			name : "Guillermo Jesús",
+			portfolioUrl : "https://portfolio-8qm.pages.dev/"
 		},
 		mari	: {
 			img : "https://robohash.org/persona1?set=set4",
-			name : "Flor María"
+			name : "Flor María",
+			portfolioUrl : ""
 		},
 		jas	: {
 			img : "https://robohash.org/persona3?set=set4",
@@ -38,7 +40,7 @@ export default function ContactsPage() {
 					<FaDocker />
 					<SiFirebase />
 				</ContactCard>
-				<ContactCard imgUrl={urls.memo.img} name={urls.memo.name}>
+				<ContactCard imgUrl={urls.memo.img} name={urls.memo.name}  portfolioUrl={urls.memo.portfolioUrl}>
 					<FaReact/>
 					<FaCss3Alt />
 					<IoLogoJavascript />
