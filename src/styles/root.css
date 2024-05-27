@@ -28,26 +28,33 @@ body::before {
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--primary-color: #B9E4C1;
-		--quaternary-color: #68DA3E;
-		--senary-color: #FFFFFF;
-
+		--bg-color: #fafffa;
+		--header-bg-color: #3D6946;
+		--st-neutral-color: #FFFFFF;
+		/*--nd-neutral-color: #303030;*/
+		--st-secondary-color: #B9E4C1;
+		/*--nd-secondary-color: #A4E98B;*/
+		--rd-secondary-color: #35F33B; 
+		/*--th-secondary-color: #68DA3E;*/
+		--border-color: #AAAAAA; 
 		--transparent: rgba(242, 116, 116, 0); 
+		--first-shadow-color: rgba(0, 0, 0, 0.4);
+		--second-shadow-color: rgba(0, 0, 0, 0.5);
+		
+
+		/*
+		--quintuary-color: #FFFFFF;
+		--text-a-color: #303030; 
+
+		--primary-color: #B9E4C1;
+		--secondary-color: #A4E98B;
+		--tertiary-color: #35F33B; 
+		--quaternary-color: #68DA3E;
+		
 		--tr-secondary-color: rgba(0, 0, 0, 0.5);
 		--tr-tertiary-color: rgba(0, 0, 0, 0.4);
-		
-		--header-bg-color: #3D6946;
-		--bg-color: #fafffa;
 
-
-
-		--secondary-color: #A4E98B;
-		--tertiary-color: #86E165; 
-		
-		--quinary-color: #53AE32;
-		
-		--border-color: #AAAAAA; 
-		--text-a-color: #303030; 
+		*/
 
 
 		

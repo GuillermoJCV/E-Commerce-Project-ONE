@@ -42,13 +42,13 @@
 	min-width: 100%;
 	width: clamp(10rem, 25vw, 15rem);
 	padding: 0.5rem;
-	border-top: 5px solid var(--quaternary-color);
-	box-shadow: 2px 2px 3px var(--tr-tertiary-color);
+	border-top: 5px solid var(--rd-secondary-color);
+	box-shadow: 2px 2px 3px var(--first-shadow-color);
 	font-family: Poppins;
-	background: var(--senary-color);
+	background: var(--st-neutral-color);
 }
 .ContactsPage__contacts__card:hover {
-	background-color: var(--primary-color);
+	background-color: var(--st-secondary-color);
 	scale: 1.05;
 	filter: brightness(1.2);
 }
