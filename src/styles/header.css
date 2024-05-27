@@ -23,8 +23,8 @@
 
 /* *Estiliza navlinks */
 .active {
-  color: var(--rd-secondary-color) !important;
-  border-bottom: 1px solid var(--rd-secondary-color);
+  color: var(--nd-secondary-color) !important;
+  border-bottom: 1px solid var(--nd-secondary-color);
   filter: brightness(1.1);
 }
 
@@ -45,7 +45,7 @@
 }
 .search input[type="text"]:focus {
   outline: none;
-  border: 2px solid var(--rd-secondary-color);
+  border: 2px solid var(--nd-secondary-color);
 }
 
 
@@ -96,7 +96,7 @@
   font-size: 16px;
 }
 .nav ul li a:hover {
-  color: var(--rd-secondary-color);
+  color: var(--nd-secondary-color);
   font-size: 16px;
   background: var(--st-secondary-color);
   scale: 1.05;
@@ -174,7 +174,7 @@
     position: absolute;
     top: 50px;
     right: 10px;
-    background: var(--rd-secondary-color);
+    background: var(--nd-secondary-color);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;

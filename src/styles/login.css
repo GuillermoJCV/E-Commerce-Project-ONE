@@ -8,12 +8,14 @@
     align-items: center;
     background: transparent;
     border-radius: 30px;
-    box-shadow: 0 5px 15px var(--main-box-shadow);
+    box-shadow: 0 5px 15px var(--rd-shadow-color);
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 420px;
     margin-top: 60px;
+    background: var(--st-neutral-color);
+
 }
 
 .main p{
@@ -25,28 +27,25 @@
 
 .main span{
     font-size: 13px;
-    color: var(--color-txt-a);
+    color: var(--nd-neutral-color);
     opacity: 0.9;
 }
 
 .main a {
-    color: var(--main-txt2);
+    color: var(--nd-neutral-color);
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.main .a {
-    color: var(--color-txt-a);
-}
+
 .main button {
     position: relative;
     width: 50%;
     height: 45px;
-    color: var(--main-txt);
+    color: var(--st-neutral-color);
     font-size: 14px;
-    background: transparent;
-    border: 2px solid var(--login-border-form);
+    border: 2px solid var(--st-neutral-color);
     outline: none;
     border-radius: 40px;
     font-weight: bold;
@@ -65,7 +64,7 @@
     left: 0;
     width: 100%;
     height: 300%;
-    background: var(--login-button);
+    background: var(--nd-secondary-color);
     z-index: -1;
     transition: all 250ms;
 }
@@ -76,8 +75,7 @@
 
 .main form{
     background: transparent;
-    border: 2px solid var(--login);
-    box-shadow: 0 4px 10px var(--login);
+    box-shadow: 0 4px 10px var(--st-shadow-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,8 +85,8 @@
 }
 
 .main input{
-    background: var(--main-txt);
-    border: none;
+    background: var(--st-neutral-color);
+    border: 2px solid var(--nd-secondary-color) ;
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
@@ -150,7 +148,7 @@
 }
 
 .social-icons a{
-    border: 1px solid var(--login-border-form);
+    border: 2px solid var(--nd-secondary-color);
     border-radius: 20%;
     display: inline-flex;
     justify-content: center;
@@ -159,12 +157,14 @@
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: var(--secondary-color);
+    color: var(--header-bg-color);
+    filter: brightness(1.4);
+    background-color: var(--st-neutral-color);
 }
 
 .social-icons a:hover{
-    color: var(--main-txt);
-    background: var(--login-border-form);
+    color: var(--st-neutral-color);
+    background: var(--nd-secondary-color);
 }
 
 .toggle-container{
@@ -186,14 +186,15 @@
 
 .toggle{
     height: 100%;
-    background: var(--login-second-background);
-    color:var(--main-txt);
+    background: var(--nd-secondary-color);
+    color:var(--st-neutral-color);
     position: relative;
     left: -100%;
     height: 100%;
     width: 200%;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
+    
 }
 
 .main.active .toggle{

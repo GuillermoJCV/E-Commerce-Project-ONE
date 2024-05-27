@@ -10,7 +10,7 @@ body {
 	position: relative;
     min-height: 100vh;
     height: fit-content;
-    background: var(--bg-color);
+    background: var(--bg-colorred);
 }
 body::before {
     content: '';
@@ -25,7 +25,6 @@ body::before {
   	z-index: -1;
 }
 
-
 @media (prefers-color-scheme: light) {
 	:root {
 		--bg-color: #fafffa;
@@ -33,38 +32,16 @@ body::before {
 		--st-neutral-color: #FFFFFF;
 		--nd-neutral-color: #303030;
 		--st-secondary-color: #B9E4C1;
-		/*--nd-secondary-color: #A4E98B;*/
-		--rd-secondary-color: #35F33B; 
-		/*--th-secondary-color: #68DA3E;*/
+		--nd-secondary-color: #35F33B; 
 		--border-color: #AAAAAA; 
 		--transparent: rgba(242, 116, 116, 0); 
 		--st-shadow-color: rgba(0, 0, 0, 0.2);
 		--nd-shadow-color: rgba(0, 0, 0, 0.4);
 		--rd-shadow-color: rgba(0, 0, 0, 0.5);
-		
-
-		/*
-		--quintuary-color: #FFFFFF;
-		--text-a-color: #303030; 
-
-		--primary-color: #B9E4C1;
-		--secondary-color: #A4E98B;
-		--tertiary-color: #35F33B; 
-		--quaternary-color: #68DA3E;
-		
-		--tr-secondary-color: rgba(0, 0, 0, 0.5);
-		--tr-tertiary-color: rgba(0, 0, 0, 0.4);
-
-		--third-color: #53ae32;
-
-		*/
-
-
-		
-
-
 	}
 }
+
+/* ***No se realizo ni un cambio***  */
 
 @media (prefers-color-scheme: dark) {
 	:root {
