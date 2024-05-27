@@ -10,7 +10,7 @@ body {
 	position: relative;
     min-height: 100vh;
     height: fit-content;
-    background: var(--bg-colorred);
+    background: var(--bg-color);
 }
 body::before {
     content: '';
@@ -22,7 +22,7 @@ body::before {
         var(--background-image-2);
     background-size: 100px 100px;
     pointer-events: none;
-  	z-index: -1;
+	z-index: -1;
 }
 
 @media (prefers-color-scheme: light) {
