@@ -129,7 +129,7 @@
   padding: 10px;
   box-sizing: border-box;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px var(--second-shadow-color);
+  box-shadow: 5px 5px 10px var(--rd-shadow-color);
   margin-top: 35px;
   display: none;
 }
@@ -178,7 +178,7 @@
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px var(--first-shadow-color);
+    box-shadow: 5px 5px 10px var(--nd-shadow-color);
     margin-top: 40px;
     display: none;
   }
@@ -216,7 +216,7 @@
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px var(--second-shadow-color);
+    box-shadow: 5px 5px 10px var(--rd-shadow-color);
     margin-top: 170px;
     display: none;
   }

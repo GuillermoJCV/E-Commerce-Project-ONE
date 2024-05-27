@@ -43,7 +43,7 @@
 	width: clamp(10rem, 25vw, 15rem);
 	padding: 0.5rem;
 	border-top: 5px solid var(--rd-secondary-color);
-	box-shadow: 2px 2px 3px var(--first-shadow-color);
+	box-shadow: 2px 2px 3px var(--nd-shadow-color);
 	font-family: Poppins;
 	background: var(--st-neutral-color);
 }

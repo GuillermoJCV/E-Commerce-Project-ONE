@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: var(--homepage-bg);
+    padding-top: 1rem;
 }
 
 .category {
@@ -12,17 +12,18 @@
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 4px 4px 3px var(--st-shadow-color);
     width: 90%;
     margin: 10px;
-    background: var(--category-bg);
+    background: var(--st-neutral-color);
 }
 
 .full-width {
     text-align: center;
-    color: var(--third-color);
+    color: var(--header-bg-color);
     font-size: 1.7rem;
     width: 100%;
+    filter: brightness(1.4);
 }
 
 /* ** Carousel */
@@ -37,7 +38,7 @@
 }
 .carousel-button {
     background-color: transparent;
-    color: var(--secondary-color);
+    color: var(--st-secondary-color);
     border: none;
     font-size: 2rem;
     cursor: pointer;
@@ -45,10 +46,10 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    font-weight: bold;
 }
 .carousel-button:hover {
-    transform: scale(1.05);
-    filter: brightness(1.5);
+    color: var(--rd-secondary-color);
 }
 .carousel-button:first-of-type {
     left: 10px;
@@ -82,7 +83,8 @@
 
 .card:hover {
     transform: scale(1.05);
-    filter: brightness(1);
+    filter: brightness(1.);
+    border-top: 4px solid var(--rd-secondary-color);
 }
 
 figure {
@@ -109,15 +111,16 @@ figure {
 }
 
 .card-category {
-    color: var(--main-txt2);
+    color: var(--nd-neutral-color);
     font-weight: 500;
 }
 
 .card-title {
-    color: var(--secondary-color);
+    color: var(--header-bg-color);
     font-weight: 600;
     text-align: center;
     margin-top: 0.5rem;
+    filter: brightness(1.4);
 }
 
 /* *Media queries */
