@@ -41,56 +41,48 @@ body::before {
 	}
 }
 
-/* ***No se realizo ni un cambio***  */
-
 @media (prefers-color-scheme: dark) {
 	:root {
-		--mainly-color: #44c61c;
-		--secondary-color: #34aa13;
-		--third-color: #277912;
-		--fourth-color: #aaaaaa;
-		--fifth-color: #F3DB11;
-		--main-txt: #fff;
-		--main-txt2: #000;
-		--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
-		--first-shadow-color: rgba(0, 0, 0, 0.5);
-		--second-shadow-color: rgba(0, 0, 0, 0.4);
-		
-		--radial-gradient-bg: radial-gradient(circle at center, rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
-		--background-image-1: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 125%);
-		--background-image-2: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 980px);
-		
-		--login: rgba(255, 255, 255, 0.2);
-		--main-box-shadow: rgba(0, 0, 0, 0.35);
-		--login-border-form: #5dff2b;
-		--color-txt-a: #303030;
-		--login-button: linear-gradient(#34aa13, #57ed29, #34aa13, #57ed29);
-		--login-background: linear-gradient(rgba(242, 116, 116, 0) 0%, rgba(117, 232, 16, 0.5) 50%);
-		--login-second-background: linear-gradient(
-			to right,
-			#5dff2b,
-			#44c61c,
-			#5dff2b
-		);
+		--bg-color: #fafffa;
+		--header-bg-color: #3D6946;
+		--st-neutral-color: #FFFFFF;
+		--nd-neutral-color: #303030;
+		--st-secondary-color: #B9E4C1;
+		--nd-secondary-color: #35F33B; 
+		--border-color: #AAAAAA; 
+		--transparent: rgba(242, 116, 116, 0); 
+		--st-shadow-color: rgba(0, 0, 0, 0.2);
+		--nd-shadow-color: rgba(0, 0, 0, 0.4);
+		--rd-shadow-color: rgba(0, 0, 0, 0.5);
 	}
 }
 
 .light-mode {
-	--mainly-color: #44c61c;
-	--secondary-color: #34aa13;
-	--third-color: #277912;
-	--main-txt: #fff;
-	--main-txt2: #000;
-	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+	--bg-color: #fafffa;
+	--header-bg-color: #3D6946;
+	--st-neutral-color: #FFFFFF;
+	--nd-neutral-color: #303030;
+	--st-secondary-color: #B9E4C1;
+	--nd-secondary-color: #35F33B; 
+	--border-color: #AAAAAA; 
+	--transparent: rgba(242, 116, 116, 0); 
+	--st-shadow-color: rgba(0, 0, 0, 0.2);
+	--nd-shadow-color: rgba(0, 0, 0, 0.4);
+	--rd-shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode {
-	--mainly-color: #44c61c;
-	--secondary-color: #34aa13;
-	--third-color: #277912;
-	--main-txt: #fff;
-	--main-txt2: #000;
-	--header-bg: linear-gradient(45deg, #44c61c, #44c61c, #34aa13, #277912);
+	--bg-color: #fafffa;
+	--header-bg-color: #3D6946;
+	--st-neutral-color: #FFFFFF;
+	--nd-neutral-color: #303030;
+	--st-secondary-color: #B9E4C1;
+	--nd-secondary-color: #35F33B; 
+	--border-color: #AAAAAA; 
+	--transparent: rgba(242, 116, 116, 0); 
+	--st-shadow-color: rgba(0, 0, 0, 0.2);
+	--nd-shadow-color: rgba(0, 0, 0, 0.4);
+	--rd-shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 :root {
