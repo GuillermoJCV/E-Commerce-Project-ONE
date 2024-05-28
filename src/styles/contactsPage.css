@@ -37,7 +37,10 @@
 }
 
 .ContactsPage__contacts__card {
+	user-select: none;
 	display: flex;
+	color: #010101;
+	text-decoration: none;
 	flex-direction: column;
 	align-items: center;
 	min-width: 100%;
@@ -48,6 +51,7 @@
 	font-family: Poppins;
 	background: var(--st-neutral-color);
 }
+
 .ContactsPage__contacts__card:hover {
 	background-color: var(--st-secondary-color);
 	scale: 1.05;
@@ -78,4 +82,11 @@
 	align-items: center;
 	height: 2rem;
 	aspect-ratio: 1/1;
+}
+
+.ContactsPage__contacts__card > a {
+	text-decoration: none;
+	border: 1px solid var(--nd-neutral-color);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
 }

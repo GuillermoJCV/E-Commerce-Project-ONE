@@ -2,7 +2,7 @@
 function ContactCard({imgUrl, name, portfolioUrl, children}) {
 
 	return(
-		<section className="ContactsPage__contacts__card">
+		<a href={portfolioUrl} target="__blank" className="ContactsPage__contacts__card">
 			<figure>
 				<img src={imgUrl} alt={"Perfil de " + name}/>
 				<figcaption>
@@ -12,8 +12,7 @@ function ContactCard({imgUrl, name, portfolioUrl, children}) {
 			<ul>
 				{children}
 			</ul>
-			<a href={portfolioUrl}>Link a su perfil</a>
-		</section>
+		</a>
 	)
 }
 
