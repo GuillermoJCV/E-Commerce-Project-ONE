@@ -1,23 +1,24 @@
-@media (width < 499px) {
-	:root {
-		--grid-columns: repeat(1, 1fr);
+/* Media queries */
+	@media (max-width: 499px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(1, 1fr);
+		}
 	}
-}
-@media (500px < width < 700px) {
-	:root {
-		--grid-columns: repeat(2, 1fr);
+	@media (min-width: 700px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(2, 1fr);
+		}
 	}
-}
-@media (701px < width < 1199px) {
-	:root {
-		--grid-columns: repeat(3, 1fr);
+	@media (min-width: 1000px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(3, 1fr);
+		}
 	}
-}
-@media (width > 1200px) {
-	:root {
-		--grid-columns: repeat(4, 1fr);
+	@media (min-width: 1200px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(4, 1fr);
+		}
 	}
-}
 
 
 .ContactsPage {
