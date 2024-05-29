@@ -1,23 +1,24 @@
-@media (width < 499px) {
-	:root {
-		--grid-columns: repeat(1, 1fr);
+/* Media queries */
+	@media (max-width: 499px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(1, 1fr);
+		}
 	}
-}
-@media (500px < width < 700px) {
-	:root {
-		--grid-columns: repeat(2, 1fr);
+	@media (min-width: 700px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(2, 1fr);
+		}
 	}
-}
-@media (701px < width < 1199px) {
-	:root {
-		--grid-columns: repeat(3, 1fr);
+	@media (min-width: 1000px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(3, 1fr);
+		}
 	}
-}
-@media (width > 1200px) {
-	:root {
-		--grid-columns: repeat(4, 1fr);
+	@media (min-width: 1200px) {
+		.ContactsPage__contacts {
+			--grid-columns: repeat(4, 1fr);
+		}
 	}
-}
 
 
 .ContactsPage {
@@ -36,7 +37,10 @@
 }
 
 .ContactsPage__contacts__card {
+	user-select: none;
 	display: flex;
+	color: #010101;
+	text-decoration: none;
 	flex-direction: column;
 	align-items: center;
 	min-width: 100%;
@@ -47,6 +51,7 @@
 	font-family: Poppins;
 	background: var(--st-neutral-color);
 }
+
 .ContactsPage__contacts__card:hover {
 	background-color: var(--st-secondary-color);
 	scale: 1.05;
@@ -77,4 +82,11 @@
 	align-items: center;
 	height: 2rem;
 	aspect-ratio: 1/1;
+}
+
+.ContactsPage__contacts__card > a {
+	text-decoration: none;
+	border: 1px solid var(--nd-neutral-color);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
 }
