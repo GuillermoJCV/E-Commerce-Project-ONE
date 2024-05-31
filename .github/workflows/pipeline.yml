@@ -18,4 +18,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Test & Deploy
-        run: npm run deploy
+        run: npm run deploy:github
