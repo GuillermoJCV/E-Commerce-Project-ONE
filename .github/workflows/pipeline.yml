@@ -1,4 +1,4 @@
-name: Test & Deploy
+name: Testing
 
 on:
   push: 
@@ -17,5 +17,7 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm install
-      - name: Test & Deploy
-        run: npm run deploy:github
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run test
