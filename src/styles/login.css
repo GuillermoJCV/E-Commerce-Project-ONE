@@ -1,4 +1,4 @@
-.main {
+.container {
     position: absolute;
     top: 50%; 
     left: 50%; 
@@ -18,33 +18,40 @@
 
 }
 
-.main p{
-    font-size: 14px;
+.container h1 {
+    font-size: 30px;
+    color: var(--header-bg-color);
+}
+
+.container p{
+    font-size: 1.3rem;
     line-height: 20px;
     letter-spacing: 0.3px;
-    margin: 20px 0;
+    margin: 1rem 0;
+    line-height: 1.5;
 }
 
-.main span{
-    font-size: 13px;
+.container span{
+    font-size: 15px;
     color: var(--nd-neutral-color);
     opacity: 0.9;
+    margin-bottom: 0.5rem;
 }
 
-.main a {
+.container a {
     color: var(--nd-neutral-color);
-    font-size: 13px;
+    font-size: 15px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
 
-.main button {
+.login-btn{
     position: relative;
-    width: 50%;
+    width: 55%;
     height: 45px;
     color: var(--st-neutral-color);
-    font-size: 14px;
+    font-size: 15px;
     border: 2px solid var(--st-neutral-color);
     outline: none;
     border-radius: 40px;
@@ -55,9 +62,10 @@
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+    transition: all 250ms;
 }
 
-.main button::before {
+.login-btn::before {
     content: "";
     position: absolute;
     top: -80%;
@@ -67,13 +75,15 @@
     background: var(--nd-secondary-color);
     z-index: -1;
     transition: all 250ms;
+    filter: brightness(0.85);
 }
 
-.main button:hover::before {
+.login-btn:hover::before {
     top: 0;
+    filter: contrast(1.8);
 }
 
-.main form{
+.container form{
     background: transparent;
     box-shadow: 0 4px 10px var(--st-shadow-color);
     display: flex;
@@ -84,15 +94,26 @@
     height: 100%;
 }
 
-.main input{
-    background: var(--st-neutral-color);
-    border: 2px solid var(--nd-secondary-color) ;
+.login-btn:active {
+    transform: scale(0.95); 
+    transition: transform 100ms; 
+}
+
+.container input{
+    background: var(--st-secondary-color);
+    border: none;
     margin: 8px 0;
     padding: 10px 15px;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 8px;
     width: 100%;
     outline: none;
+    filter: brightness(1.2);
+}
+
+.container input:hover{
+    border: 1px solid var(--nd-secondary-color);
+    background: none;
 }
 
 .form-container{
@@ -111,7 +132,7 @@
     transition: opacity 700ms, transform 500ms;
 }
 
-.main.show-sign-in .sign-in{
+.container.show-sign-in .sign-in{
     opacity: 1;
     transform: translateX(0%);
 }
@@ -125,7 +146,7 @@
     transition: opacity 500ms, transform 500ms;
 }
 
-.main.active .sign-up{
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -141,6 +162,10 @@
         opacity: 1;
         z-index: 5;
     }
+}
+
+.sign-up input {
+    filter: brightness(1.1) !important;
 }
 
 .social-icons {
@@ -179,14 +204,14 @@
     z-index: 1000;
 }
 
-.main.active .toggle-container{
+.container.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
 .toggle{
     height: 100%;
-    background: var(--nd-secondary-color);
+    background: var(--header-bg-color);
     color:var(--st-neutral-color);
     position: relative;
     left: -100%;
@@ -197,14 +222,14 @@
     
 }
 
-.main.active .toggle{
+.container.active .toggle{
     transform: translateX(50%);
 }
 
-.toggle p {
-    font-size: 19px;
+.toggle h1 {
+    color: var(--st-neutral-color);
+    margin: 1.25rem 0;
 }
-
 .toggle-panel{
     position: absolute;
     width: 50%;
@@ -224,7 +249,7 @@
     transform: translateX(-200%);
 }
 
-.main.active .toggle-left{
+.container.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -233,6 +258,23 @@
     transform: translateX(0);
 }
 
-.main.active .toggle-right{
+.container.active .toggle-right{
     transform: translateX(200%);
+}
+
+.toggle-btn{
+    color: var(--header-bg-color);
+    font-weight: bold;
+    border: 2px solid var(--nd-secondary-color);
+}
+.toggle-btn::before {
+    background-color: var(--st-neutral-color);
+    filter: brightness(1.2);
+}
+.toggle-btn:hover,
+.toggle-btn:hover::before {
+    top: 0;
+    filter: contrast(1.8);
+    background-color: var(--nd-secondary-color);
+    color: var(--st-neutral-color);
 }
