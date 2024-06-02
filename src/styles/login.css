@@ -1,4 +1,4 @@
-.main {
+.container {
     position: absolute;
     top: 50%; 
     left: 50%; 
@@ -7,57 +7,65 @@
     justify-content: center;
     align-items: center;
     background: transparent;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px var(--rd-shadow-color);
+    border-radius: 1.875rem;
+    box-shadow: 0 2px 2px 3px var(--st-secondary-color);
     overflow: hidden;
-    width: 768px;
+    width: 48rem;
     max-width: 100%;
-    min-height: 420px;
+    min-height: 26.25rem;
     margin-top: 60px;
     background: var(--st-neutral-color);
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.main p{
-    font-size: 14px;
-    line-height: 20px;
+.container h1 {
+    font-size: 1.875rem;
+    color: var(--header-bg-color);
+}
+
+.container p{
+    font-size: 1.3rem;
+    line-height: 1.25rem;
     letter-spacing: 0.3px;
-    margin: 20px 0;
+    margin: 1rem 0;
+    line-height: 1.5;
 }
 
-.main span{
-    font-size: 13px;
+.container span{
+    font-size: 0.938rem;
     color: var(--nd-neutral-color);
     opacity: 0.9;
+    margin-bottom: 0.5rem;
 }
 
-.main a {
+.container a {
     color: var(--nd-neutral-color);
-    font-size: 13px;
+    font-size: 0.938rem;
     text-decoration: none;
-    margin: 15px 0 10px;
+    margin: 0.938rem 0 0.625rem;
 }
 
 
-.main button {
+.login-btn{
     position: relative;
-    width: 50%;
-    height: 45px;
+    width: 55%;
+    height: 2.813rem;
     color: var(--st-neutral-color);
-    font-size: 14px;
+    font-size: 0.938rem;
     border: 2px solid var(--st-neutral-color);
     outline: none;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     font-weight: bold;
     z-index: 1;
     overflow: hidden;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     cursor: pointer;
+    transition: all 250ms;
 }
 
-.main button::before {
+.login-btn::before {
     content: "";
     position: absolute;
     top: -80%;
@@ -67,32 +75,45 @@
     background: var(--nd-secondary-color);
     z-index: -1;
     transition: all 250ms;
+    filter: brightness(0.85);
 }
 
-.main button:hover::before {
+.login-btn:hover::before {
     top: 0;
+    filter: contrast(1.8);
 }
 
-.main form{
+.container form{
     background: transparent;
-    box-shadow: 0 4px 10px var(--st-shadow-color);
+    box-shadow: 0 4px 0.625rem var(--st-shadow-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     height: 100%;
 }
 
-.main input{
-    background: var(--st-neutral-color);
-    border: 2px solid var(--nd-secondary-color) ;
-    margin: 8px 0;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
+.login-btn:active {
+    transform: scale(0.95); 
+    transition: transform 100ms; 
+}
+
+.container input{
+    background: var(--st-secondary-color);
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.625rem 0.938rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
     width: 100%;
     outline: none;
+    filter: brightness(1.2);
+}
+
+.container input:hover{
+    border: 1px solid var(--nd-secondary-color);
+    background: none;
 }
 
 .form-container{
@@ -111,7 +132,7 @@
     transition: opacity 700ms, transform 500ms;
 }
 
-.main.show-sign-in .sign-in{
+.container.show-sign-in .sign-in{
     opacity: 1;
     transform: translateX(0%);
 }
@@ -125,7 +146,7 @@
     transition: opacity 500ms, transform 500ms;
 }
 
-.main.active .sign-up{
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -143,8 +164,12 @@
     }
 }
 
+.sign-up input {
+    filter: brightness(1.1) !important;
+}
+
 .social-icons {
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 .social-icons a{
@@ -154,9 +179,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 3px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.375rem;
     color: var(--header-bg-color);
     filter: brightness(1.4);
     background-color: var(--st-neutral-color);
@@ -175,18 +200,18 @@
     height: 100%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
+    border-radius: 9.375rem 0 0 6.25rem;
     z-index: 1000;
 }
 
-.main.active .toggle-container{
+.container.active .toggle-container{
     transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
+    border-radius: 0 9.375rem 6.25rem 0;
 }
 
 .toggle{
     height: 100%;
-    background: var(--nd-secondary-color);
+    background: var(--header-bg-color);
     color:var(--st-neutral-color);
     position: relative;
     left: -100%;
@@ -197,14 +222,14 @@
     
 }
 
-.main.active .toggle{
+.container.active .toggle{
     transform: translateX(50%);
 }
 
-.toggle p {
-    font-size: 19px;
+.toggle h1 {
+    color: var(--st-neutral-color);
+    margin: 1.25rem 0;
 }
-
 .toggle-panel{
     position: absolute;
     width: 50%;
@@ -213,7 +238,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 30px;
+    padding: 0 1.875rem;
     text-align: center;
     top: 0;
     transform: translateX(0);
@@ -224,7 +249,7 @@
     transform: translateX(-200%);
 }
 
-.main.active .toggle-left{
+.container.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -233,6 +258,23 @@
     transform: translateX(0);
 }
 
-.main.active .toggle-right{
+.container.active .toggle-right{
     transform: translateX(200%);
+}
+
+.toggle-btn{
+    color: var(--header-bg-color);
+    font-weight: bold;
+    border: 2px solid var(--nd-secondary-color);
+}
+.toggle-btn::before {
+    background-color: var(--st-neutral-color);
+    filter: brightness(1.2);
+}
+.toggle-btn:hover,
+.toggle-btn:hover::before {
+    top: 0;
+    filter: contrast(1.8);
+    background-color: var(--nd-secondary-color);
+    color: var(--st-neutral-color);
 }

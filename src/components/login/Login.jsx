@@ -44,7 +44,7 @@ const Login = () => {
     };
     // Ya muestra inicio de sesión
     return (
-        <main className="main" ref={containerRef}>
+        <main className="container" ref={containerRef}>
             <section className="form-container sign-in">
                 <form ref={formRef}>
                     <h1>Iniciar Sesión</h1>
@@ -75,7 +75,7 @@ const Login = () => {
                     <a className="a" href="#">
                         ¿Olvidaste tu contraseña?
                     </a>
-                    <button id="bt-sign-in" type="submit">
+                    <button className="login-btn" type="submit">
                         Iniciar Sesión
                     </button>
                 </form>
@@ -104,7 +104,7 @@ const Login = () => {
                     <input type="text" placeholder="Name" required />
                     <input type="email" placeholder="Email" required />
                     <input type="password" placeholder="Password" required />
-                    <button type="submit">Registrarse</button>
+                    <button className="login-btn" type="submit">Registrarse</button>
                 </form>
             </section>
 
@@ -116,7 +116,7 @@ const Login = () => {
                             Ingrese sus datos personales para utilizar todas las funciones del
                             sitio
                         </p>
-                        <button className="hidden" onClick={handleLoginClick}>
+                        <button className="login-btn toggle-btn" onClick={handleLoginClick}>
                             Iniciar Sesión
                         </button>
                     </article>
@@ -126,7 +126,7 @@ const Login = () => {
                             Registre sus datos personales para utilizar todas las funciones
                             del sitio
                         </p>
-                        <button className="hidden" onClick={handleRegisterClick}>
+                        <button className="login-btn toggle-btn" onClick={handleRegisterClick}>
                             Registrarse
                         </button>
                     </article>
