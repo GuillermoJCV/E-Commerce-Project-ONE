@@ -2,7 +2,7 @@ import { lazy, Suspense} from 'react';
 import Header from './components/header-page/Header.jsx';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/loader.css"
-import { getCssVariables } from "./utils/getRootCSSVariables/getVariables.js"
+import { getCssVariable } from "./utils/getRootCSSVariables/getVariables.js"
 import { GooeyCircleLoader } from "react-loaders-kit"
 
 const HomePage = lazy(() => import('./components/home-page/HomePage.jsx'))
@@ -11,9 +11,9 @@ const Login = lazy(() => import('./components/login/Login.jsx'))
 const ContactsPage = lazy(() => import('./components/contacts-page/ContactsPage.jsx'))
 
 function App() {
-  const headerBgColor = getCssVariables("--header-bg-color")
-  const stSecondaryColor = getCssVariables("--st-secondary-color")
-  const ndSecondaryColor = getCssVariables("--nd-secondary-color")
+  const headerBgColor = getCssVariable("--header-bg-color")
+  const stSecondaryColor = getCssVariable("--st-secondary-color")
+  const ndSecondaryColor = getCssVariable("--nd-secondary-color")
 
   const loaderProps = {
     loading: true,
