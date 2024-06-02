@@ -8,14 +8,14 @@
     align-items: center;
     background: transparent;
     border-radius: 30px;
-    box-shadow: 0 5px 15px var(--rd-shadow-color);
+    box-shadow: 0 0.3rem 0.3rem 0.5rem var(--st-secondary-color);
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 420px;
     margin-top: 60px;
     background: var(--st-neutral-color);
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container h1 {
