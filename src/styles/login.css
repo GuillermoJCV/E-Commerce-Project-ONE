@@ -8,7 +8,7 @@
     align-items: center;
     background: transparent;
     border-radius: 1.875rem;
-    box-shadow: 0 0.3rem 0.3rem 0.5rem var(--st-secondary-color);
+    box-shadow: 0 2px 2px 3px var(--st-secondary-color);
     overflow: hidden;
     width: 48rem;
     max-width: 100%;
