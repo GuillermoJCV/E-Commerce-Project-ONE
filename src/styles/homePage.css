@@ -52,11 +52,11 @@
     color: var(--nd-secondary-color);
 }
 .carousel-button:first-of-type {
-    left: 10px;
+    left: 2rem;
 }
 
 .carousel-button:last-of-type {
-    right: 10px;
+    right: 2rem;
 }
 .carousel-content {
     display: flex;
@@ -65,7 +65,7 @@
 .carousel-slide {
     flex: 0 0 auto;
     width: 20%;
-    padding: 20px 25px 0;
+    padding: 20px 35px 0;
     box-sizing: border-box;
 }
 
