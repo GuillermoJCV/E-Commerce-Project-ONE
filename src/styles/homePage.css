@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
+    padding: 1.563rem;
     box-shadow: 3px 4px 4px 3px var(--st-shadow-color);
     width: 90%;
     margin: 10px;
@@ -65,7 +65,7 @@
 .carousel-slide {
     flex: 0 0 auto;
     width: 20%;
-    padding: 20px 35px 0;
+    padding: 1.25rem 2.188rem 0;
     box-sizing: border-box;
 }
 
@@ -95,8 +95,8 @@ figure {
 }
 
 .card-container--img {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
 }
 
 .card-container--info {
@@ -127,7 +127,7 @@ figure {
 
 @media (max-width: 1200px) {
     .carousel-slide {
-        width: calc(25% - 20px);
+        width: calc(25% - 1.25rem);
     }
 }
 
@@ -135,7 +135,7 @@ figure {
     .carousel-slide {
         flex: 0 0 auto;
         width: 20%;
-        padding: 20px 25px 0;
+        padding: 1.25rem 1.563rem 0;
         box-sizing: border-box;
     }
 }
