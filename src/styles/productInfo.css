@@ -1,0 +1,9 @@
+/* productInfo.css */
+.product__info {
+    text-align: center;
+  }
+  
+  .product__info img {
+    max-width: 24rem;
+    margin-bottom: 10px;
+  }

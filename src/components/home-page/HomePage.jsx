@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ProductFetcher from './ProductFetcher';
 import ProductCard from './ProductCard';
 import Carousel from './Carousel';
@@ -24,12 +25,13 @@ export default function HomePage() {
                                 <Carousel
                                     items={products}
                                     renderItem={product => (
-                                        <ProductCard
-                                            key={product.id}
-                                            name={product.name}
-                                            price={product.price}
-                                            image={product.image}
-                                        />
+                                        <Link to={`/product/${product.id}`} key={product.id}>
+                                            <ProductCard
+                                                name={product.name}
+                                                price={product.price}
+                                                image={product.image}
+                                            />
+                                        </Link>
                                     )}
                                 />
                             ) : (

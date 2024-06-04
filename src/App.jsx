@@ -9,6 +9,7 @@ const HomePage = lazy(() => import('./components/home-page/HomePage.jsx'))
 const ProductsPage = lazy(() => import('./components/products-page/ProductsPage.jsx'))
 const Login = lazy(() => import('./components/login/Login.jsx'))
 const ContactsPage = lazy(() => import('./components/contacts-page/ContactsPage.jsx'))
+const ProductInfo = lazy(() => import('./components/products-page/ProductInfo.jsx'))
 
 function App() {
   const headerBgColor = getCssVariable("--header-bg-color")
@@ -29,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/products" element={<ProductsPage/>}/>
+            <Route path="/product/:productId" element={<ProductInfo/>}/>
             <Route path="/contact" element={<ContactsPage/>}/>
             <Route path="/login" element={<Login/>}/>
           </Routes>
