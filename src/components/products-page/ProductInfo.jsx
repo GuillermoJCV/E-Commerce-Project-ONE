@@ -1,6 +1,6 @@
+import{ useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { productList } from '../../services/productServices';
-import { useEffect, useState } from 'react';
 import '../../styles/productInfo.css';
 import ProductFetcher from '../home-page/ProductFetcher';
 import ProductCard from '../home-page/ProductCard';
@@ -10,6 +10,8 @@ import AddToCartButton from './AddToCartButton';
 export default function ProductInfo() {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
+    const [isScrollable, setIsScrollable] = useState(false);
+    const imgContainerRef = useRef(null);
 
     useEffect(() => {
         productList()
@@ -25,6 +27,20 @@ export default function ProductInfo() {
                 console.error('Error fetching product:', error);
             });
     }, [productId]);
+
+    useEffect(() => {
+        if (imgContainerRef.current) {
+            setIsScrollable(imgContainerRef.current.scrollWidth > imgContainerRef.current.clientWidth);
+        }
+    }, [product]);
+
+    const scrollLeft = () => {
+        imgContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    };
+
+    const scrollRight = () => {
+        imgContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    };
 
     if (!product) {
         return <div>Cargando producto...</div>;
@@ -43,23 +59,33 @@ export default function ProductInfo() {
                             />
                         </figure>
                     </article>
+                    {/* Sección de imagenes*/}
                     <section className='product__img__container'>
+                        {isScrollable && (
+                            <>
+                                <button className="scroll-button scroll-button-left" onClick={scrollLeft}>
+                                    &#x2026;
+                                </button>
+                            </>
+                        )}
                         <article>
-                            <figure className='product__info'>
-                                <img
-                                    className="card-container--img product-images" 
-                                    src={product.image}
-                                />
-                                <img
-                                    className="card-container--img product-images"
-                                    src={product.image}
-                                />
-                                <img
-                                    className="card-container--img product-images"
-                                    src={product.image}
-                                />
+                            <figure className='product__info' ref={imgContainerRef}>
+                                {Array(10).fill().map((_, idx) => (
+                                    <img
+                                        key={idx}
+                                        className="card-container--img product-images"
+                                        src={product.image}
+                                    />
+                                ))}
                             </figure>
                         </article>
+                        {isScrollable && (
+                            <>
+                                <button className="scroll-button scroll-button-right" onClick={scrollRight}>
+                                    &#x2026;
+                                </button>
+                            </>
+                        )}
                     </section>
                 </div>
                 <aside className="product-info--aside">
