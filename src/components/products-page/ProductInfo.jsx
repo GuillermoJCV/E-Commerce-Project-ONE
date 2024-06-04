@@ -5,10 +5,10 @@ import '../../styles/productInfo.css';
 import ProductFetcher from '../home-page/ProductFetcher';
 import ProductCard from '../home-page/ProductCard';
 import { Link } from 'react-router-dom';
+import AddToCartButton from './AddToCartButton';
 
 export default function ProductInfo() {
     const { productId } = useParams();
-
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
@@ -66,10 +66,9 @@ export default function ProductInfo() {
                     <h2>Nombre del producto</h2>
                     <p>Categoría</p>
                     <p>{product.price}</p>
-                    <button className="button__car">Agregar al carrito</button>
+                    <AddToCartButton />
                 </aside>
             </div>
-
             <section className="product-info--section">
                 <h2 className='full-width'>PRODUCTOS RELACIONADOS</h2>
                 <div className='product__info'>

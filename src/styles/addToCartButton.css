@@ -1,0 +1,45 @@
+/* styles.css */
+.button__car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: var(--header-bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    color: var(--st-neutral-color);
+}
+
+.button__car:hover {
+    background-color: var(--header-bg-color);
+    filter:brightness(1.3);
+}
+
+.button__car.checked {
+    background-color: var(--nd-secondary-color);
+    font-weight: bold;
+    filter:brightness(1);
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--st-neutral-color);
+    border-radius: 3px;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.button__car.checked .checkmark {
+    color: var(--nd-secondary-color);
+}
