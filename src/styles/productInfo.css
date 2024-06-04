@@ -16,11 +16,14 @@
     display: flex;
     justify-content:flex-end;
     padding: 3rem 0.5rem;
+    aspect-ratio: auto;
+    width: 100%;
+    height: auto;
 }
 
 .card-img {
-    max-width: 45rem !important;
-    height: auto !important;
+    width: 40rem;
+    height: 28rem;
     margin-bottom: 10px;
     background-color: var(--st-secondary-color);
     padding: 1rem;
