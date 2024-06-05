@@ -1,4 +1,4 @@
-import{ useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { productList } from '../../services/productServices';
 import '../../styles/productInfo.css';
@@ -6,12 +6,11 @@ import ProductFetcher from '../home-page/ProductFetcher';
 import ProductCard from '../home-page/ProductCard';
 import { Link } from 'react-router-dom';
 import AddToCartButton from './AddToCartButton';
+import Carousel from '../home-page/Carousel';
 
 export default function ProductInfo() {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
-    const [isScrollable, setIsScrollable] = useState(false);
-    const imgContainerRef = useRef(null);
 
     useEffect(() => {
         productList()
@@ -28,19 +27,6 @@ export default function ProductInfo() {
             });
     }, [productId]);
 
-    useEffect(() => {
-        if (imgContainerRef.current) {
-            setIsScrollable(imgContainerRef.current.scrollWidth > imgContainerRef.current.clientWidth);
-        }
-    }, [product]);
-
-    const scrollLeft = () => {
-        imgContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    };
-
-    const scrollRight = () => {
-        imgContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    };
 
     if (!product) {
         return <div>Cargando producto...</div>;
@@ -59,33 +45,41 @@ export default function ProductInfo() {
                             />
                         </figure>
                     </article>
-                    {/* Sección de imagenes*/}
+                    {/* Sección 2 de imagenes*/}
                     <section className='product__img__container'>
-                        {isScrollable && (
-                            <>
-                                <button className="scroll-button scroll-button-left" onClick={scrollLeft}>
-                                    &#x2026;
-                                </button>
-                            </>
-                        )}
-                        <article>
-                            <figure className='product__info' ref={imgContainerRef}>
-                                {Array(10).fill().map((_, idx) => (
-                                    <img
-                                        key={idx}
-                                        className="card-container--img product-images"
-                                        src={product.image}
-                                    />
-                                ))}
-                            </figure>
-                        </article>
-                        {isScrollable && (
-                            <>
-                                <button className="scroll-button scroll-button-right" onClick={scrollRight}>
-                                    &#x2026;
-                                </button>
-                            </>
-                        )}
+                        <ProductFetcher>
+                            {(products, error) => (
+                                error ? (
+                                    <div className="full-width">
+                                        <h3 className="error">{error}</h3>
+                                        <img
+                                            className="error-image"
+                                            src="assets/image/sin-conexion.svg"
+                                            alt="No hay conexión"
+                                        />
+                                    </div>
+                                ) : (
+                                    Array.isArray(products) && products.length > 0 ? (
+                                        <Carousel
+                                            items={products}
+                                            renderItem={product => (
+                                                <Link to={`/product/${product.id}`} key={product.id}>
+                                                    <figure>
+                                                        <img
+                                                            className="card-container--img"
+                                                            src={product.image}
+                                                            alt={product.name}
+                                                        />
+                                                    </figure>
+                                                </Link>
+                                            )}
+                                        />
+                                    ) : (
+                                        <div>No hay productos disponibles</div>
+                                    )
+                                )
+                            )}
+                        </ProductFetcher>
                     </section>
                 </div>
                 <aside className="product-info--aside">
@@ -95,6 +89,7 @@ export default function ProductInfo() {
                     <AddToCartButton />
                 </aside>
             </div>
+            {/* Sección 3 de productos relacionados*/}
             <section className="product-info--section">
                 <h2 className='full-width'>PRODUCTOS RELACIONADOS</h2>
                 <div className='product__info'>
@@ -113,11 +108,17 @@ export default function ProductInfo() {
                                 Array.isArray(products) && products.length > 0 ? (
                                     products.map(product => (
                                         <Link to={`/product/${product.id}`} key={product.id}>
+                                            <div className='product__info--img'>
+                                            <div className='product__info--category'>
+                                                1
+                                            </div>
                                             <ProductCard
                                                 name={product.name}
                                                 price={product.price}
                                                 image={product.image}
                                             />
+                                            
+                                            </div>
                                         </Link>
                                     ))
                                 ) : (
