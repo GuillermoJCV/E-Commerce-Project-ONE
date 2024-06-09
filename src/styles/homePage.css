@@ -70,7 +70,7 @@
 }
 
 /* ** Card */
-.card {
+.product__card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +81,7 @@
     padding: 10px;
 }
 
-.card:hover {
+.product__card:hover {
     transform: scale(1.05);
     filter: brightness(1.);
     border-top: 4px solid var(--nd-secondary-color);
@@ -94,12 +94,12 @@ figure {
     align-items: center;
 }
 
-.card-container--img {
+.product__card-img {
     width: 6.25rem;
     height: 6.25rem;
 }
 
-.card-container--info {
+.product__card-info {
     width: 100%;
     font-size: 1rem;
     font-weight: bold;
@@ -110,12 +110,12 @@ figure {
     font-family: 'Arial Narrow';
 }
 
-.card-category {
+.product__card-category {
     color: var(--nd-neutral-color);
     font-weight: 500;
 }
 
-.card-title {
+.product__card-title {
     color: var(--header-bg-color);
     font-weight: 600;
     text-align: center;

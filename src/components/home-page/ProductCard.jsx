@@ -3,16 +3,16 @@ import '../../styles/homePage.css';
 
 function ProductCard({ name,  image }) {
     return (
-        <article className="card">
+        <article className="product__card">
             <figure>
                 <img
-                    className="card-container--img"
+                    className="product__card-img"
                     src={image}
                     alt={name}
                 />
-                <figcaption className="card-container--info">
-                    <p className="card-category">Producto</p>
-                    <p className="card-title">{name}</p>
+                <figcaption className="product__card-info">
+                    <p className="product__card-category">Producto</p>
+                    <p className="product__card-title">{name}</p>
                 </figcaption>
             </figure>
         </article>
