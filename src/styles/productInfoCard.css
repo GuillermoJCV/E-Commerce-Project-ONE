@@ -1,0 +1,22 @@
+.card__category {
+    color: var(--nd-neutral-color);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+.card__title {
+    color: var(--nd-neutral-color);
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0.5rem;
+    filter: brightness(1.7);
+}
+.card__price {
+    color: var(--header-bg-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0.5rem;
+    filter: brightness(1);
+    text-decoration: none;
+}

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { productList } from '../../services/productServices';
 import '../../styles/productInfo.css';
 import ProductFetcher from '../home-page/ProductFetcher';
-import ProductCard from '../home-page/ProductCard';
+import ProductInfoCard from './ProductInfoCard';
 import { Link } from 'react-router-dom';
 import AddToCartButton from './AddToCartButton';
 import Carousel from '../home-page/Carousel';
@@ -37,7 +37,7 @@ export default function ProductInfo() {
             <div className="product-info-container">
                 <div className="product-details">
                     <article className="product-info">
-                        <figure>
+                        <figure className="card-img-container">
                             <img
                                 className="card-img"
                                 src={product.image}
@@ -45,7 +45,7 @@ export default function ProductInfo() {
                             />
                         </figure>
                     </article>
-                    {/* Sección 2 de imagenes*/}
+                    {/* Sección 2 de imágenes*/}
                     <section className='product__img__container'>
                         <ProductFetcher>
                             {(products, error) => (
@@ -112,7 +112,7 @@ export default function ProductInfo() {
                                             <div className='product__info--category'>
                                                 1
                                             </div>
-                                            <ProductCard
+                                            <ProductInfoCard
                                                 name={product.name}
                                                 price={product.price}
                                                 image={product.image}
