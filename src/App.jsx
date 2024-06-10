@@ -9,7 +9,7 @@ const HomePage = lazy(() => import('./components/home-page/HomePage.jsx'))
 const ProductsPage = lazy(() => import('./components/products-page/ProductsPage.jsx'))
 const Login = lazy(() => import('./components/login/Login.jsx'))
 const ContactsPage = lazy(() => import('./components/contacts-page/ContactsPage.jsx'))
-const ProductInfo = lazy(() => import('./components/products-page/ProductInfo.jsx'))
+const ProductInfo = lazy(() => import('./components/products-page/product-info/ProductInfo.jsx'))
 
 function App() {
   const headerBgColor = getCssVariable("--header-bg-color")

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../../styles/addToCartButton.css';
+import '../../../styles/addToCartButton.css';
 
 export default function AddToCartButton() {
     const [isChecked, setIsChecked] = useState(false);

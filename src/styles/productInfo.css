@@ -22,11 +22,22 @@
     height: auto;
 }
 
+/* *Sección de la primera imagen*/
+.card-img-container {
+    position: relative;
+    width: 86%;
+    padding-top: 50%;
+    overflow: hidden;
+    background-color: var(--st-neutral-color);
+}
 .card-img {
-    width: 44rem;
-    height: 30rem;
-    background-color: var(--st-secondary-color);
-    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 /* *Sección de imagenes*/
@@ -74,23 +85,79 @@
     flex-wrap: wrap;
     gap: 1.5rem 4rem;
 }
-
+/* *Sección 3 de productos*/
 .product__info--img {
     background-color: var(--st-secondary-color);
-    width: 16rem;
-    height: 17.5rem;
+    width: 14rem;
+    height: 16.5rem;
 }
-
 .prooduct__info--img:hover {
     border-top: none;
 }
-
 .product__info--category {
     background-color: blue;
     width: 3.5rem;
-    height: 2.6rem;
-
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+/* *ProductInfoCard */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background: transparent;
+    padding: 10px;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(1.);
+    border-top: 4px solid red;
+}
 
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.card-container--img {
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+.card-container--info {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    margin: 0;
+    padding: 15px;
+    font-family: 'Arial Narrow';
+}
+
+.card-category {
+    color: var(--nd-neutral-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.card-title {
+    color: var(--header-bg-color);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+    filter: brightness(1.4);
+}
+
+.card-price {
+    color: var(--header-bg-color);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
