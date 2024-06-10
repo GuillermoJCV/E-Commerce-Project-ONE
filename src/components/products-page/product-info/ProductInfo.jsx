@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { productList } from '../../services/productServices';
+import { productList } from '../../../services/productServices';
 import '../../styles/productInfo.css';
-import ProductFetcher from '../home-page/ProductFetcher';
-import ProductCard from '../home-page/ProductCard';
+import ProductFetcher from '../../home-page/ProductFetcher';
+import ProductCard from '../../home-page/ProductCard';
 import { Link } from 'react-router-dom';
 import AddToCartButton from './AddToCartButton';
-import Carousel from '../home-page/Carousel';
+import Carousel from '../../home-page/Carousel';
 
 export default function ProductInfo() {
     const { productId } = useParams();
