@@ -92,3 +92,7 @@ body::before {
 main {
 	margin-top: var(--header-height);
 }
+
+a[href*="product"] {
+	text-decoration: none;
+}

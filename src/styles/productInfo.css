@@ -83,7 +83,6 @@
     width: 90%;
     flex-wrap: wrap;
     gap: 1.5rem ;
-    text-decoration: none;
 }
 /* *Sección 3 de productos*/
 .product__info--img {
@@ -145,7 +144,6 @@
     font-weight: 500;
     font-size: 0.9rem;
     text-align: left;
-    text-decoration: none;
 }
 
 .card__title {
@@ -154,7 +152,6 @@
     text-align: left;
     margin-top: 0.5rem;
     filter: brightness(1.4);
-    text-decoration: none;
 }
 
 .card__price {
@@ -163,5 +160,4 @@
     margin-top: 0.5rem;
     font-size: 1.2rem;
     text-align: left;
-    text-decoration: none;
 }
