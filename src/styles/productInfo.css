@@ -53,14 +53,110 @@
     margin-left: auto;
     margin-right: 0.5rem;
 }
-
+/* *Sección de información aside*/
 .product-info--aside {
     flex: 1;
     background-color: var(--st-neutral-color);
     padding: 1rem 2rem;
     margin-top: 3rem;
+    font-family: Arial Narrow;
+}
+.aside-info {
+    margin: 1rem 0;
+}
+.aside-container-category {
+    margin: 1rem 0 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.aside-category-1 {
+    background-color: #D65BB3;
+    width: 3.5rem;
+    height: 2rem;
+}
+.aside-category-2 {
+    background-color: #28B5D3;
+    width: 3.5rem;
+    height: 2rem;
+}
+.aside-category-3 {
+    background-color: #7AC750;
+    width: 3.5rem;
+    height: 2rem;
+}
+.aside-category-4 {
+    background-color: #D8DB3D;
+    width: 3.5rem;
+    height: 2rem;
 }
 
+.aside-price {
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: var(--nd-secondary-color);
+    filter: brightness(0.8);
+}
+
+.aside-shipment {
+    margin: 2rem 0 0.5rem 0;
+}
+
+.aside-button {
+    background-color: var(--st-neutral-color);
+    color: var(--border-color);
+    font-weight: bold;
+    border-radius: 0.8rem;
+    width: 236px;
+    height: 34px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--border-color);
+    box-shadow: 4px 4px 4px 0 var(--st-shadow-color);
+}
+
+.aside-button a {
+    color: var(--nd-secondary-color);
+    filter: brightness(0.7);
+    font-weight: bold;
+}
+
+.product-info--aside h3 {
+    margin: 1rem 0;
+}
+.aside-divider {
+    border: 0;
+    height: 3px;
+    background-color: var(--border-color);
+    margin: 2.8rem 0;
+    width: 40%;
+}
+
+.aside-description {
+    width: 40%;
+    text-align: justify;
+    color:  var(--border-color); 
+}
+
+.rectangle-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.rectangle {
+    margin: 0.5rem 0;
+    width: 48%; 
+    height: 92px;
+    background-color: var(--nd-secondary-color);
+    filter:brightness(1.2.3);
+    opacity: 0.5;
+}
+
+/* *Sección 3 de productos relacionados */   
 .product-info--section {
     margin: 2rem;
     margin-bottom: 1.5rem;

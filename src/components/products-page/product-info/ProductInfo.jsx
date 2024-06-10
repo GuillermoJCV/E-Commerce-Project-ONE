@@ -84,10 +84,31 @@ export default function ProductInfo() {
                 </div>
                 <aside className="product-info--aside">
                     <h2>Nombre del producto</h2>
-                    <p>Categoría</p>
-                    <p>{product.price}</p>
+                    <p className='aside-info'>Categoría</p>
+                    <div className="aside-container-category">
+                        <div className='aside-category-1'></div>
+                        <div className='aside-category-2'></div>
+                        <div className='aside-category-3'></div>
+                        <div className='aside-category-4'></div>
+                    </div>
+                    <p className='aside-price'>{product.price}</p>
                     <AddToCartButton />
+                    <p className='aside-shipment'>Opciones de envío</p>
+                    <button className='aside-button'>
+                        CORREOS
+                        <a>Verifiicar</a>
+                    </button>
+                    <hr className="aside-divider" />
+                    <h3>Detalles de fabricación</h3>
+                    <p className='aside-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur, turpis non convallis ultricies, velit nulla vehicula elit, nec bibendum sem justo at orci. Aliquam erat volutpat. Curabitur nec varius purus.</p>
+                    <h3>Acciones asociadas</h3>
+                    <div className="rectangle-container">
+                        <div className="rectangle"></div>
+                        <div className="rectangle"></div>
+                        <div className="rectangle"></div>
+                    </div>
                 </aside>
+                
             </div>
             {/* Sección 3 de productos relacionados*/}
             <section className="product-info--section">
