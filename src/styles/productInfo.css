@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
     flex: 2;
-    background-color: blue;
     padding: 1rem;
 }
 
@@ -48,10 +47,10 @@
     width: 44rem;
     overflow: hidden;
     position: relative;
-    background-color: rgb(42, 165, 75);
-    margin-top: 1rem;
+    background-color: var(--st-neutral-color);
     margin-left: auto;
     margin-right: 0.5rem;
+    padding: 0.5rem;
 }
 /* *Sección de información aside*/
 .product-info--aside {
@@ -164,12 +163,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: Arial Narrow;
 }
 
 .product-info--section h2 {
     margin: 1.5rem;
 }
 
+.product-info--section article {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
 .product__info {
     display: flex;
     flex-direction: row;

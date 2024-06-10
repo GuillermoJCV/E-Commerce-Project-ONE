@@ -113,6 +113,12 @@ export default function ProductInfo() {
             {/* Sección 3 de productos relacionados*/}
             <section className="product-info--section">
                 <h2 className='full-width'>PRODUCTOS RELACIONADOS</h2>
+                <article>
+                    <h3>CATEGORÍA 1</h3>
+                    <h3>CATEGORÍA 2</h3>
+                    <h3>CATEGORÍA 3</h3>
+                    <h3>CATEGORÍA 4</h3>
+                </article>
                 <div className='product__info'>
                     <ProductFetcher>
                         {(products, error) => (
