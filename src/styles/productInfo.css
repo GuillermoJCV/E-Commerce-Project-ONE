@@ -132,11 +132,11 @@
     height: 3px;
     background-color: var(--border-color);
     margin: 2.8rem 0;
-    width: 40%;
+    width: 297px;
 }
 
 .aside-description {
-    width: 40%;
+    width: 297px;
     text-align: justify;
     color:  var(--border-color); 
 }
@@ -149,7 +149,7 @@
 
 .rectangle {
     margin: 0.5rem 0;
-    width: 48%; 
+    width: 297px;
     height: 92px;
     background-color: var(--nd-secondary-color);
     filter:brightness(1.2.3);
