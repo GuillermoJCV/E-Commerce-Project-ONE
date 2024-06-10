@@ -87,11 +87,12 @@
     border-top: 4px solid var(--nd-secondary-color);
 }
 
-figure {
+.card-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .card-container--img {
@@ -118,7 +119,7 @@ figure {
 .card-title {
     color: var(--header-bg-color);
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     margin-top: 0.5rem;
     filter: brightness(1.4);
 }

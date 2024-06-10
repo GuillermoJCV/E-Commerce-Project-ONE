@@ -81,15 +81,15 @@
     align-items: center;
     margin: 1.5rem 2.5rem;
     width: 90%;
-    height: auto;
     flex-wrap: wrap;
-    gap: 1.5rem 4rem;
+    gap: 1.5rem ;
+    text-decoration: none;
 }
 /* *Sección 3 de productos*/
 .product__info--img {
-    background-color: var(--st-secondary-color);
-    width: 14rem;
-    height: 16.5rem;
+    background-color: var(--border-color);
+    width: 13rem;
+    filter: brightness(1.4);
 }
 .prooduct__info--img:hover {
     border-top: none;
@@ -101,63 +101,67 @@
     border-radius: 0.5rem;
 }
 /* *ProductInfoCard */
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card__container {
     width: 100%;
-    height: fit-content;
     background: transparent;
-    padding: 10px;
 }
 
-.card:hover {
+.card-container:hover {
     transform: scale(1.05);
     filter: brightness(1.);
-    border-top: 4px solid red;
 }
 
-figure {
+.container-img {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
 }
 
-.card-container--img {
-    width: 6.25rem;
-    height: 6.25rem;
-}
 
-.card-container--info {
+.card-container-img {
     width: 100%;
-    font-size: 1rem;
+    height: 13rem;
+    padding: 5px;
+    filter: brightness(0.7);
+    object-fit: cover;
+}
+
+.card-container-info {
+    width: 100%;
     font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
     margin: 0;
     padding: 15px;
     font-family: 'Arial Narrow';
+    filter: brightness(0.8);
+    background-color: var(--st-neutral-color);
 }
 
-.card-category {
+.card__category {
     color: var(--nd-neutral-color);
     font-weight: 500;
     font-size: 0.9rem;
+    text-align: left;
+    text-decoration: none;
 }
 
-.card-title {
+.card__title {
     color: var(--header-bg-color);
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     margin-top: 0.5rem;
     filter: brightness(1.4);
+    text-decoration: none;
 }
 
-.card-price {
+.card__price {
     color: var(--header-bg-color);
     font-weight: 600;
     margin-top: 0.5rem;
     font-size: 1.2rem;
+    text-align: left;
+    text-decoration: none;
 }

@@ -4,7 +4,7 @@ import '../../styles/homePage.css';
 function ProductCard({ name,  image }) {
     return (
         <article className="card">
-            <figure>
+            <figure className='card-container'>
                 <img
                     className="card-container--img"
                     src={image}

@@ -3,17 +3,17 @@ import '../../../styles/productInfo.css';
 
 function ProductInfoCard({ name,  image, price }) {
     return (
-        <article className="card">
-            <figure>
+        <article className="card__container">
+            <figure className='container-img'>
                 <img
-                    className="card-container--img"
+                    className="card-container-img"
                     src={image}
                     alt={name}
                 />
-                <figcaption className="card-container--info">
-                    <p className="card-category">Tipo de Producto</p>
-                    <p className="card-title">{name}</p>
-                    <p className="card-price">{price}</p>
+                <figcaption className="card-container-info">
+                    <p className="card__category">Producto</p>
+                    <p className="card__title">{name}</p>
+                    <p className="card__price">{price}</p>
                 </figcaption>
             </figure>
         </article>
