@@ -109,8 +109,8 @@
     color: var(--border-color);
     font-weight: bold;
     border-radius: 0.8rem;
-    width: 236px;
-    height: 34px;
+    width: 14.75rem;
+    height: 2.125rem;
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -132,11 +132,11 @@
     height: 3px;
     background-color: var(--border-color);
     margin: 2.8rem 0;
-    width: 297px;
+    width: 18.563rem;
 }
 
 .aside-description {
-    width: 297px;
+    width: 18.563rem;
     text-align: justify;
     color:  var(--border-color); 
 }
@@ -149,8 +149,8 @@
 
 .rectangle {
     margin: 0.5rem 0;
-    width: 297px;
-    height: 92px;
+    width: 18.563rem;
+    height: 5.75rem;
     background-color: var(--nd-secondary-color);
     filter:brightness(1.2.3);
     opacity: 0.5;
