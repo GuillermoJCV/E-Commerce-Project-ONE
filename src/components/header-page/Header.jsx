@@ -1,13 +1,9 @@
-import { useRef } from "react";
 import '../../styles/header.css';
 import Logo from '../../assets/image/logo2.png';
 import { IoSearch } from "react-icons/io5";
-import NavList from "./navList/NavList.jsx";
-import { toggleShowClass } from "../../utils/headerUtils/toggleShowClass.js"
+import Menu from "./Menu.jsx";
 
 function Header() {
-  const menuRef = useRef(null); // Ref para el menú
-  //const loginMenuRef = useRef(null); // Ref para el menú de ingreso
 
   return (
     <header className="header">
@@ -27,10 +23,7 @@ function Header() {
 
       {/* Renderizar el menú */}
       <div>
-        <div className="menu-icon" onClick={() => toggleShowClass(menuRef)}></div>
-        <nav ref={menuRef} className="nav tablet-nav">
-          <NavList />
-        </nav>
+        <Menu/>
       </div>
       
     </header>

@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import menuIcon from "../../assets/icons/menu-icon.png"
+import { IoMenu } from "react-icons/io5";
 import NavList from "./navList/NavList.jsx";
 import { toggleShowClass } from "../../utils/headerUtils/toggleShowClass.js"
+import '../../styles/header.css';
 
 function Menu() {
   const menuRef = useRef(null); // Ref para el menú
@@ -13,10 +14,7 @@ function Menu() {
     <div>
       <div className="menu-icon" onClick={() => toggleShowClass(menuRef)}>
         {/* Este ícono puede ser reutilizado aquí */}
-        <img
-          src={menuIcon}
-          alt="Menu"
-        />
+        <IoMenu className="io-menu" />
       </div>
 
       {/* Renderizar el menú */}

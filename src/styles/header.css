@@ -73,7 +73,7 @@
 
 /* *** Menu icono *** */
 .menu-icon {
-  display: none;
+  display: block;
 }
 .nav {
   display: flex;
@@ -103,6 +103,10 @@
   scale: 1.05;
 	filter: brightness(1.4);
   border-radius: 10px;
+}
+.io-menu {
+  display: none;
+  font-size: 2rem;
 }
 
 /* *theme  */
@@ -166,21 +170,25 @@
   .menu-icon {
     display: block;
     cursor: pointer;
+    height: 2.5rem;
   }
   .nav ul {
     display: none;
   }
   /* *** Revisar no esta en uso *** */
-  .tablet-nav {
+  .io-menu {
+    display: block;
+    cursor: pointer;
+  }.tablet-nav {
     position: absolute;
-    top: 50px;
-    right: 10px;
-    background: var(--nd-secondary-color);
+    top: 80px;
+    right: 70px;
+    background: var(--mainly-color);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px var(--nd-shadow-color);
-    margin-top: 40px;
+    box-shadow: 5px 5px 10px var(--rd-shadow-color);
+    margin-top: 170px;
     display: none;
   }
   .tablet-nav ul {
