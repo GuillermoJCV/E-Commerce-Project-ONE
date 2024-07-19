@@ -188,17 +188,22 @@
   .io-menu {
     display: block;
     cursor: pointer;
-  }.tablet-nav {
+  }
+  .tablet-nav {
     position: absolute;
-    top: 80px;
-    right: 70px;
-    background: var(--mainly-color);
-    padding: 10px;
+    top: 0px;
+    right: 1.5rem;
+    background:var(--header-bg-color);
+    padding: 1rem 10px 10px 10px;
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 5px 5px 10px var(--rd-shadow-color);
-    margin-top: 170px;
+    margin-top: 5.5rem;
     display: none;
+    opacity: 0.9;
+  }
+  .tablet-nav-icon {
+    padding-left: 10px !important;
   }
   .tablet-nav ul {
     display: block;
@@ -219,6 +224,7 @@
   }
   .tablet-nav ul li a:hover {
     background: var(--st-secondary-color);
+    padding: 0.4rem 0.6rem;
   }
 
   /* *** login-menu *** */

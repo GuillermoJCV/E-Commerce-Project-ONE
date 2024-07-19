@@ -60,7 +60,7 @@ export default function NavList({ loginMenuRef }) {
       </li>
 
       {/* Ingresar icono para cambiar de tema de claro a oscuro */}
-      <li className="theme" onClick={handleThemeToggle}>
+      <li className="theme tablet-nav-icon" onClick={handleThemeToggle}>
         {isDarkMode
           ? <BsFillSunFill className="icon-large icon-sun" />
           : <BsFillMoonStarsFill className="icon-large icon-moon" />}
