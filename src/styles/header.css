@@ -111,11 +111,11 @@
 
 /* Clases para los íconos */
 .icon-moon {
-  color: black;
+  color: var(--st-neutral-color);
 }
 
 .icon-sun {
-  color: yellow;
+  color: var(--st-neutral-color);
 }
 
 /* *theme  */
